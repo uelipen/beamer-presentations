@@ -3,10 +3,14 @@
 \usepackage{graphicx}
 \usepackage{verbatim}
 \usepackage{wrapfig}
+\usepackage{tabularx}
+\usepackage{multirow}
+\usepackage{amssymb}
 \useoutertheme{shadow}
 %\usecolortheme{orchid}
 \usecolortheme{seahorse}
 
+\newcommand*{\GtrSim}{\smallrel\gtrsim}
 
 % math commands
 \newcommand{\be}{\begin{eqnarray}}
@@ -47,7 +51,7 @@
 %\subtitle{}
 \author[U. Pen]{{
 \textcolor{green}{\small K. Masui, H-S. Lin, J. Sievers}, 
-\textcolor{cyan}{\small Y. Li, Y. Jadav, L. Connor} 
+\textcolor{cyan}{\small Y. Li, J. Yadav, L. Connor} 
 \textcolor{darkgray}{\small U. Pen, X. Chen, J. Peterson and many more}
 }
 \\[8mm] 
@@ -103,6 +107,11 @@ image credit: NRAO/AUI/NSF
      \includegraphics[width=\textwidth]{Figures/FRB_nrao.jpg}
 }
 
+\frame{
+    \frametitle{Waterfall}
+     \includegraphics[width=0.8\textwidth]{Figures/nature15769-f1.jpg}
+Masui et al 2015, Nature 15769
+}
 
   \frame{
     \frametitle{Basic Properties}
@@ -128,7 +137,58 @@ image credit: NRAO/AUI/NSF
       \item local: flare stars, microwave ovens
     \end{itemize}
   }
+ 
+  \frame{
+    \frametitle{Candidates}
+{%\tiny
+\fontsize{0.05cm}{0.055cm}\selectfont 
+\hspace{-0.5in}   \begin{table*}
+\label{TAB-1}
+\begin{tabularx}{1.08\textwidth}{@{\extracolsep{\fill}}|lccccccc|}
+\hline
+\multicolumn{1}{|c}{\textbf{Location}}                                                                                            & \textbf{Model}                                              & \textbf{\begin{tabular}[c]{@{}c@{}}Galactic \\ scintillation\end{tabular}} & \textbf{\begin{tabular}[c]{@{}c@{}}Faraday \\ rotation\end{tabular}} & \textbf{$\mathbf{\frac{dlnN_{\rm FRB}}{dlnS_{\nu}}}$}                                      & \multicolumn{1}{l}{\textbf{Counterpart}}                                    & \textbf{\begin{tabular}[c]{@{}c@{}}DM range\\ (pc cm$^{-3}$)\end{tabular}} & \textbf{\begin{tabular}[c]{@{}c@{}}Pol angle \\ swing\end{tabular}} \\ \hline
+\multicolumn{1}{|l|}{\multirow{4}{*}{\begin{tabular}[c]{@{}l@{}}Cosmological \\ ($\GtrSim 1 h^{-1}$Gpc)\end{tabular}}}             & Blitzars                                                    & $\times$                                                                         & $\lesssim 7$ rad m$^{-2}$                                               & ?                                                                                      & \begin{tabular}[c]{@{}c@{}}gravitational \\ waves\end{tabular}              & 300-2500                                                                & $\times$                                                                  \\
+\multicolumn{1}{|l|}{}                                                                                                            & Merging COs                                                 & $\times$                                                                         & $\lesssim 7$ rad m$^{-2}$                                      & ?                                                                                      & \begin{tabular}[c]{@{}c@{}}type Ia SNe,\\  X-ray, $\gamma$-ray\end{tabular} & 300-2500                                                                & $\times$                                                                  \\
+\multicolumn{1}{|l|}{}                                                                                                            & Primordial BHs                                              & $\times$                                                                         & $\lesssim 7$ rad m$^{-2}$                                               & ?                                                                             & $\sim$TeV                                                                   & 300-2500                                                                & $\times$                                                                  \\
+\multicolumn{1}{|l|}{}                                                                                                            & Magnetar flare                                              & $\times$                                                                         & $\lesssim 7$ rad m$^{-2}$                                               & ?                                                                                      & \begin{tabular}[c]{@{}c@{}}$\sim$ms TeV \\ burst\end{tabular}               & 300-2500                                                                & $\checkmark$                                                        \\ \cline{1-1}
+\multicolumn{1}{|l|}{\multirow{3}{*}{\begin{tabular}[c]{@{}l@{}}Extragalactic, local \\ ($\lesssim$200$ h^{-1}$Mpc)\end{tabular}}} & Edge-on disk                                                & $\checkmark$                                                               & 50-500 rad m$^{-2}$                                                     & -3/2                                                                                   & ?                                                                           & 10-2000                                                                 & ?                                                                   \\
+\multicolumn{1}{|l|}{}                                                                                                            & \begin{tabular}[c]{@{}c@{}}Nuclear \\ magnetar\end{tabular} & $\checkmark$                                                               & 10$^{3-5}$ rad m$^{-2}$                                                 & -3/2                                                                                   & none                                                                        & 10-3000                                                                 & $\checkmark$                                                        \\
+\multicolumn{1}{|l|}{}                                                                                                            & SNR pulsar                                                  & $\checkmark$                                                               & 20-$10^3$ rad m$^{-2}$                                                  & -3/2                                                                                   & \begin{tabular}[c]{@{}c@{}}archival CC \\ SNe or \\ nearby galaxy \end{tabular}                  & 10$^2$-10$^4$                                                           & $\checkmark$                                                        \\ \cline{1-1}
+\multicolumn{1}{|l|}{Galactic ($\lesssim 100$ kpc)}                                                                                & flaring MS stars                                            & $\checkmark$                                                               & RM$_{\rm gal}$                                                          & -3/2                                                                                   & \begin{tabular}[c]{@{}c@{}}main sequence \\ star\end{tabular}               & $\gtrsim$ 300                                                           & $\times$                                                                  \\ \cline{1-1}
+\multicolumn{1}{|l|}{Terrestrial ($\lesssim 10^5$ km)}                                                                             & RFI                                                         & $\times$                                                                         & $\lesssim$ RM$_{\rm ion}$                                                          & $\left\{\begin{matrix}-1/2 \,\, if \,\, 2D \\ -3/2 \,\, if \,\, 3D\end{matrix}\right.$ & none                                                                        & ?                                                                       & $\times$                                                                  \\ \hline
 
+\end{tabularx}
+\caption{This table summarizes a number of FRB models by classifying them as cosmological, 
+extragalactic but non-cosmological, Galactic, and terrestrial. 
+The seven columns are potential observables of FRBs and each
+ row gives their consequence for a given model 
+ (Blitzars,
+ compact object mergers,
+ exploding primordial blackholes,
+bursts from magnetars,
+edge-on disk galaxies,
+circumnuclear magnetars,
+ supernova remnant pulsars, stellar flares
+and terrestrial RFI.
+For the latter, we subdivide the RFI into planar RFI (2D) coming
+ from the earth's surface, and 3D RFI coming from objects like satellites. 
+ Since scintillation
+only affects unresolved images, cosmological sources that are not scattered near the source
+will not scintillate in our Galaxy, while non-cosmological sources whose screens are intrinsic will. 
+For Faraday rotation and scintillation
+ we assume 
+the RM and SM comes from the same place as the DM, e.g. the IGM for cosmological sources, though such models 
+could introduce a more local Faraday effect or a scattering screen.
+Even though
+all models have to explain the observed 375-1600 pc cm$^{-3}$, some models predict a wider 
+range of DM. For instance, in the circumnuclear magnetar or edge-on disk disk scenarios there 
+ought to be bursts at relatively low DM that simply have not been identified as FRBs. In our supernova 
+remnant model DMs should be very large early in the pulsar's life, though this window is short and 
+therefore such high DM bursts would be rare.}
+\end{table*}
+
+}
+  }
 
   \frame{
     \frametitle{FRB110523}
@@ -140,10 +200,6 @@ image credit: NRAO/AUI/NSF
      \item beat double odds with data: intensity mapping, FRB       
     \end{itemize}
   }
-\frame{
-    \frametitle{Waterfall}
-     \includegraphics[width=0.8\textwidth]{Figures/nature15769-f1.jpg}
-}
 \frame{
     \frametitle{Polarization}
      \includegraphics[width=0.8\textwidth]{Figures/nature15769-f2.jpg}
@@ -173,37 +229,6 @@ image credit: NRAO/AUI/NSF
     \end{itemize}
   }
 
-
-  \frame{
-    \frametitle{Speculation}
-    \begin{itemize}
-    \item grazing incidence reconnection sheets
-    \item ULP + Levin 2014
-    \item ULP + King 2012
-    \item Liu + ULP 2015
-    \item 1-D structure
-    \item localized scattering
-%    \item predicts RM gradient
-    \end{itemize}
-\begin{picture}(320,235)
-\put(110,170){
-\includegraphics[width=3.0in]{Figures/toronto-skyline.png}}
-\put(-60,-207){
-\includegraphics[width=5.5in]{Figures/sheetgeom.eps}}
-\end{picture}
-  }
-  \frame{
-    \frametitle{Folds}
-\begin{center}
-\includegraphics[width=3.9in]{Figures/refraction.pdf}
-\end{center}
-
-Refraction of light rays near point D.  The black lines
-  are the light paths.  The shaded region indicates the lensing sheet
-  caustic.  The angles obey Snell's Law
-  $\frac{\sin(\alpha_1)}{\sin(\alpha_2)}=\frac{\sin(\alpha_4)}{\sin(\alpha_3)}=\frac{n_{\rm sheet}}{n_{\rm
-    ISM}.$ }
-}
 
 
 
