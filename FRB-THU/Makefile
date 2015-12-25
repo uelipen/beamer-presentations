@@ -6,14 +6,14 @@ FIGURES = $(MDIR)/
 BIBFILES = 			
 
 default: main.pdf
-all: main.pdf
+all: main.pdf ntu.pdf
 figures: $(FIGURES)
 
 #intermediate.temp: main.tex main.bbl
 #	pdflatex -draftmode -interaction=nonstopmode main.tex >intermediate.temp
 	 
-main.pdf: main.tex $(FIGURES)
-	pdflatex -interaction=nonstopmode main.tex
+%.pdf: %.tex $(FIGURES)
+	pdflatex -interaction=nonstopmode $<
 
 #main.aux: main.tex
 #	pdflatex -draftmode -interaction=nonstopmode main.tex 
