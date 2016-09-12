@@ -15,6 +15,9 @@ figures: $(FIGURES)
 main.pdf: main.tex $(FIGURES)
 	pdflatex -interaction=nonstopmode main.tex
 
+cita.pdf: main.tex $(FIGURES)
+	pdflatex -interaction=nonstopmode cita.tex
+
 #main.aux: main.tex
 #	pdflatex -draftmode -interaction=nonstopmode main.tex 
 
