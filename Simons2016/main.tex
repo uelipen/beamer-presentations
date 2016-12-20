@@ -66,17 +66,36 @@
     \tableofcontents
   }
 \end{comment}
-\section{Reconstruction}
+
+\section{21cm Intensity Mapping}
   \frame{
 \vspace{-0.5in}
-    \frametitle{History}
+    \frametitle{Experiments}
     \begin{itemize}
       \item in memory: Fred Kwok-Yung Lo
-        \item Seo, Eisenstein, etc: displacements
-        \item signal loss, noise increase (Ngan et al 2012)
-        \item Mass coordinates: Zhu et al 2016
-        \item reverse N-body: Tully-Peebles, Goldberg, Wang (ELUCID)
-        \item 
+        \item ongoing: GBT, Parkes, CHIME, Tianlai
+        \item construction: Hirax, BINGO
+        \item high-z: GMRT, LOFAR, MWA, Paper, (HERA, SKA)
+     \end{itemize}
+  }
+\frame{
+    \frametitle{CHIME}
+%\vspace{-0.5in}
+\hspace{-0.2in}\includegraphics[width=2.3in]{Figures/CHIME-2_1200px.jpg}  
+\vspace{0.15in}\includegraphics[width=2.21in]{Figures/Ringmaps1.png}  
+  }
+
+  \frame{
+\vspace{-0.5in}
+    \frametitle{Reconstruction}
+    \begin{itemize}
+      \item 21cm IM maps potentially have very high density of objects
+      \item optical trend has been to sample at low density to bypass
+        non-linear effects
+      \item success from Eisenstein++: displacement reconstruction
+      \item signal loss, noise increase (Ngan et al 2012)
+      \item Mass coordinates: Zhu et al 1609.07041
+      \item reverse N-body: Tully-Peebles, Goldberg, Wang (ELUCID)
      \end{itemize}
   }
 
@@ -84,10 +103,11 @@
 \vspace{-0.5in}
     \frametitle{1-D}
     \begin{itemize}
-        \item McQuinn\&White
+        \item McQuinn\&White 2016
         \item unique mass coordinate
         \item closest non-parametric reconstruction (Zhu et al 2016)
      \end{itemize}
+\includegraphics[width=4.21in]{Figures/gaussian_pert.pdf}  
   }
 \frame{
     \frametitle{3-D: E-mode}
@@ -100,18 +120,48 @@
 
   \frame{
     \frametitle{Low noise limit}
-\includegraphics[width=3.4in]{Figures/rk.pdf}
-
+\begin{eqnarray}
+{\rm potential\ deformation\ \ \ \ \ }  x^i &=& \xi^\mu \delta^i_\mu + \frac{\partial \phi}{\partial
+    \xi^\mu}\delta^{i\mu}\nonumber\\
+{\rm dreibein\ \ \ \ \ \  } e^i_\mu &\equiv& \partial x^i / \partial \xi ^ \mu \nonumber\\
+ {\rm volume\  element\ \ \ \ }\sqrt{g} &\equiv& \mathrm{det}\left| e^i_\mu\right|\nonumber\\
+{\rm mass\ coordinate \ \ \ \ \ }    \rho \sqrt{g}&=&\mathrm{Const.}\nonumber\\
+    \partial _\mu (\rho \sqrt{g} e^\mu _i \delta^{i\nu}
+    \partial_\nu \dot{\phi})&=&\langle\rho\rangle-\rho \sqrt{g}
+\label{eqn:dif}
+\end{eqnarray}
+Solve diffusion eqn (\ref{eqn:dif}) using multigrid (Pen 1995)
 }
+
+  \frame{
+    \frametitle{Multigrid solution}
+\center{\includegraphics[width=3.0in]{Figures/map0512-0128_i1500_.png}}
+Zhu et al 1610.09638
+}
+
   \frame{
     \frametitle{Low noise limit}
+\includegraphics[width=3.4in]{Figures/rk.pdf}
+}
+  \frame{
+    \frametitle{BAO}
 \includegraphics[width=3.4in]{Figures/dlnpk_dlns.png}
 
 }
   \frame{
-    \frametitle{Low noise limit}
+    \frametitle{FoM}
 \includegraphics[width=3.4in]{Figures/BAOerr.png}
 
+}
+  \frame{
+    \frametitle{Halos}
+\vspace{-4in}\hspace{-0.5in}\includegraphics[width=5.0in]{Figures/map_both_150.pdf}
+
+Voronoi tiling, Yu et al (2016, in prep)
+}
+  \frame{
+    \frametitle{Halos}
+\vspace{-0.5in}\hspace{-0.9in}\includegraphics[width=5.0in]{Figures/halocc.pdf}
 }
 
   \frame{
