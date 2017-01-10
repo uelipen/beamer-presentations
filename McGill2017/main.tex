@@ -55,8 +55,8 @@
 %\subtitle{}
 \author[U. Pen]{{
 { 
-\textcolor{green}{\small R. Main, D. Simard, D. Baker, F. Lin} 
-F. Kirsten, I. Yang, V. Marthi
+\textcolor{green}{\small R. Main, D. Simard, D. Baker, F. Lin,
+F. Kirsten, I. Yang, V. Marthi}
 }, 
 \textcolor{red}{\small M. van Kerkwijk, K. Vanderlinde, JP Macquart,
   U. Pen} 
@@ -104,6 +104,7 @@ image credit: Andre Recnik
   \frame{
     \frametitle{Overview}
     \begin{itemize}
+      \item lensing: diffractive vs refractive
       \item Turbulence?
       \item magnetism
       \item Scintillometry
@@ -113,25 +114,79 @@ image credit: Andre Recnik
     \end{itemize}
     \vspace{-1in}\hspace{2in}\includegraphics[width=0.5\textwidth]{Figures/IMG-7749-ARO-crop.JPG}
   }
-\section{Turbulence}
+  \frame{
+    \frametitle{Scintillometry}
+\includegraphics[width=0.8\textwidth]{Figures/liu-lens.png} \tiny
+Brisken+2010, Liu+Pen 2016
+  }
+
+\frame{
+    \frametitle{Lensing}
+    \begin{itemize}
+      \item geometric optics: refraction -- Snell's law
+        $\frac{\sin\theta_1}{\sin\theta_2}=\frac{n_2}{n_1}$
+      \item e.g. twinkling stars, eyeglasses
+      \item multiple geometric images, that may interfere
+      \item chromatic, $\Delta \theta\propto \lambda^2$
+      \item wave optics: diffraction -- $\Delta \theta = \frac{\lambda}{L}$
+        \item e.g. grating, hologram, fresnel lens
+        \item requires tiny scale structures
+        \item misinterpreted as source of pulsar scintillation
+%      \item chromatic, $\Delta \theta\propto \lambda$
+    \end{itemize}
+    \vspace{-1.01in}
+\hspace{2in}
+\includegraphics[width=0.3\textwidth]{Figures/prism.png}
+\includegraphics[width=0.3\textwidth]{Figures/Snells_law2.png}
+
+\vspace{0.9in}
+}
+
+
+
+\section{Lensing}
 
 \frame{
     \frametitle{Turbulence}
     \begin{itemize}
       \item observed on large scales in the ISM, outer scale $\sim 100$pc
-      \item inner scale of $<1000$km proposed based on pulsar scintillation
+      \item inner scale of $<1000$km proposed based on pulsar
+        scintillation
+      \item at odds with damping physics -- invoke undetermined plasma effects
       \item at odds with secondary spectra inverted parabolic arcs
         (Stinebring++ 2010++) and VLBI (Brisken et al 2010)
+      \item intermittent, non-Gaussian, omni-predictive
     \end{itemize}
 
 }
+
+
+  \frame{
+    \frametitle{Grazing incidence}
+\includegraphics[width=0.9\textwidth]{Figures/toronto.png}
+  }
+
+
+\frame{
+    \frametitle{Interference}
+    \begin{itemize}
+      \item Goldreich Sridhar 2006: refractive images generically
+        interfere, e.g. double slit
+      \item leads to scintillation scaling $\delta_\nu\propto \nu^{-4}$
+      \item projected density caustics: Snell's law diverges
+    \end{itemize}
+
+}
+
+\section{Magnetism}
 \frame{
     \frametitle{Magnetism}
     \begin{itemize}
       \item ISM is a perfect conductor (not superconductor)
       \item local lowest energy state is straight field
-      \item impeded by topological entanglement (Braitwaite++ 2004++)
-      \item proposed for Ap stars and white dwarfs
+      \item impeded by topological entanglement (Braitwaite++ 2004++),
+        Gruzinov 2009
+      \item originally proposed for Ap stars and white dwarfs
     \end{itemize}
     \vspace{-0.1in}\hspace{3in}\includegraphics[width=0.3\textwidth]{Figures/braithwaite.png}
 }
@@ -141,26 +196,14 @@ image credit: Andre Recnik
     \frametitle{Current Sheets}
     \begin{itemize}
       \item magnetic field directional change is exact solution to MHD equilibrium
-      \item stability unknown, meta-stable (Sweet-Parker 1959+) or unstable (tearing
-        mode, petcheck)
+      \item stability unknown, meta-stable (Sweet-Parker 1957+) or unstable (tearing
+        mode, Petscheck 1964, +++)
       \item proposed as source of scattering (Goldreich-Sridhar 2006,
         Pen-Levin 2014)
     \end{itemize}
 \includegraphics[width=0.9\textwidth]{Figures/reconnection.png} \tiny (Pang+2011)
   }
 
-
-  \frame{
-    \frametitle{Scintillometry}
-\includegraphics[width=0.8\textwidth]{Figures/liu-lens.png} \tiny Liu+Pen 2016
-  }
-
-  \frame{
-    \frametitle{Grazing incidence}
-    \begin{itemize}
-\includegraphics[width=0.9\textwidth]{Figures/toronto.png}
-    \end{itemize}
-  }
 
 
   \frame{
@@ -181,7 +224,6 @@ image credit: Andre Recnik
     \item Masui+ 2015, FRB110523: lensing of tail by milky way localizes scattering screen to host
       galaxy, rules out IGM scattering
     \item  repeating FRB: potential to discriminate AGN from nebula
-     \item 
     \end{itemize}
   }
 
@@ -190,10 +232,12 @@ image credit: Andre Recnik
     \begin{itemize}
     \item 'best bet' candidate for FRBs
     \item archetype: PSR J1745-2900
-    \item hyperstrong scattering: scattering dominated at <4GHz.
+    \item hyperstrong scattering: scattering dominated at $<4$GHz.
     \item time resolved 3-D imaging: two screens, N-S screen at 3.4
       kpc, E-W at 4.4 kpc
     \end{itemize}
+\includegraphics[width=0.5\textwidth]{Figures/fringes.png}
+\includegraphics[width=0.5\textwidth]{Figures/analyze_search.png}
   }
   \frame{
     \frametitle{Pulsars}
@@ -206,16 +250,41 @@ image credit: Andre Recnik
      \item distances and inclinations to binary pulars: masses, sizes
        (inertia), distances
     \end{itemize}
+
+
+\vspace{-0.3in}\hspace{1.8in} 
+\includegraphics[width=0.4\textwidth]{Figures/allgate.pdf}
+\vspace{0.5in}
+\tiny Pen+ 2014
+
+.
+  }
+
+
+
+
+  \frame{
+    \frametitle{Discussion}
+    \begin{itemize}
+      \item tale of two stories
+      \item turbulence: diffractive, generically not in agreement, not
+        predictive, not falsifyable, information destructive
+      \item Rare, thin inclined sheets: predictive, information constructive
+      \item Testable with multi-epoch VLBI
+    \end{itemize}
   }
 
 
   \frame{
     \frametitle{Conclusion}
     \begin{itemize}
-      \item new picture of interstellar plasma
+      \item new picture of non-turbulent small scale interstellar
+        plasma
+        \item topologically constricted magnetic domains
       \item 1-D instead of 3-D lenses: potential to improve pulsar
         timing, mapping.
-      \item 
+      \item potential to use scintillometry for precision pulsar
+        distances, orbits, masses, improved PTA
     \end{itemize}
   }
 
