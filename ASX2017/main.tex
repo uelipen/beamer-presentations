@@ -1,0 +1,266 @@
+\documentclass[graphics]{beamer}
+\usepackage{xcolor}
+\usepackage{graphicx}
+\usepackage{verbatim}
+\usepackage{wrapfig}
+\useoutertheme{shadow}
+%\usecolortheme{orchid}
+\usecolortheme{seahorse}
+
+
+% math commands
+\newcommand{\be}{\begin{eqnarray}}
+\newcommand{\ee}{\end{eqnarray}}
+\newcommand{\beq}{\begin{equation}}
+\newcommand{\eeq}{\end{equation}}
+\def\simless{\mathbin{\lower 3pt\hbox
+      {$\rlap{\raise 5pt\hbox{$\char'074$}}\mathchar"7218$}}}
+\def\simgreat{\mathbin{\lower 3pt\hbox
+      {$\rlap{\raise 5pt\hbox{$\char'076$}}\mathchar"7218$}}} %> or of order
+
+% variables
+
+\def\toonscale{0.45}
+\def\mboxy#1{\mbox{\small #1}}
+
+\defbeamertemplate*{title page}{customized}[1][]
+{
+  \usebeamerfont{title}\inserttitle\par
+  \usebeamerfont{subtitle}\usebeamercolor[fg]{subtitle}\insertsubtitle\par
+  \bigskip
+  \usebeamerfont{author}\insertauthor\par
+  \usebeamerfont{institute}\insertinstitute\par
+  \usebeamerfont{date}\insertdate\par
+  \usebeamercolor[fg]{titlegraphic}\inserttitlegraphic
+}
+\begin{comment}
+\AtBeginSection[]{
+  \frame{
+    \frametitle{Outline}
+    \tableofcontents[currentsection]
+  }
+}
+\end{comment}
+
+
+\title{Interstellar Lenses}
+%\subtitle{}
+\author[U. Pen]{{
+%\textcolor{green}{\small Aladdin Seaifan, Dana Simard, Robert Main}, 
+\textcolor{cyan}{\small Ue-Li Pen} 
+\textcolor{darkgray}{\small  on behalf of the Scintillometry team}
+}
+\\[8mm] 
+}
+\date{March 23, 2017}
+
+
+\begin{document}
+
+\frame{
+\vspace{-0.5in}
+\begin{center}  
+%\includegraphics[width=4.4in]{Figures/IMG-0438-by-Andre-cropped.jpg}
+\end{center}
+\begin{picture}(320,250)
+\put(-50,60){
+\includegraphics[width=5.5in]{Figures/traverse-aurora.jpg}}
+\end{picture}
+\vspace{-4in}
+\\
+image credit: Andre Recnik
+\\
+\vspace{1in}
+\titlepage
+}
+
+%\section*{Introduction}
+\section{Introduction}
+
+\begin{comment}
+  \subsection{Outline}
+
+  \frame{
+    \frametitle{Outline}
+    \tableofcontents
+  }
+\end{comment}
+
+  \frame{
+    \frametitle{Overview}
+    \begin{itemize}
+      \item ARO 46m
+      \item VLBI
+      \item Pulsars
+      \item Plasma Lenses
+    \end{itemize}
+\vspace{-1in}
+\hspace{1.3in}\includegraphics[width=3.4in]{Figures/PANO-20140610-155348-Phils-panorama-dish-cropped-scaled.jpg}
+  }
+
+\section{History}
+
+\frame{
+  \frametitle{ARO}
+\begin{itemize}
+
+\end{itemize}
+\includegraphics[width=3.9in]{Figures/arodish_0274_1620px.jpg}
+}
+
+
+ \frame{
+    \frametitle{VLBI}
+    \begin{itemize}
+        \item April 17, 1967. First VLBI (Very Long Baseline
+          Interferometry) ARO-DRAO, Galt, Yen et al.  
+\item IEEE Milestone:  
+{\it 
+VLBI combines the signals of widely separated telescopes in order to
+form a single observation range.  In the experiment that was
+recognized as an IEEE Milestone, the range achieved between a first
+telescope at the DRAO facility in Penticton, British Columbia and a
+second one in Algonquin Park, Ontario was 3,074 kilometers
+}
+\item the adjacent IEEE milestones: invention of video games, LCD's, CERN, internet. 
+    \end{itemize}
+}
+
+\section{Pulsars}
+
+\frame{
+    \frametitle{Pulsars}
+     \includegraphics[width=\textwidth]{Figures/Pulsar.jpg}
+{\tiny \newline 
+http://www.astronomy.com/news/videos/2014/05/astronomers-harness-the-galaxys-biggest-telescope-to-make-most-precise-measurement-of-spinning-star
+}
+}
+
+
+  \frame{
+\vspace{-0.5in}
+    \frametitle{Pulsar VLBI}
+    \begin{itemize}
+        \item brightest known radio intensity in the universe (hotter
+          than big bang)
+        \item radar/holography imaging through interstellar medium (ISM)
+        \item potential for imaging pulsar magnetosphere, ISM.
+%          \vspace{-0.15in}
+    \end{itemize}
+\vspace{-0.1in}\hspace{.3in}
+\includegraphics[width=1.2in]{Figures/DRAO_26m_dish.jpg}
+\vspace{-0.5in}
+\includegraphics[width=1.9in]{Figures/IMG-7749-ARO-crop.JPG}
+  }
+  \frame{
+    \frametitle{Pulsar Scintillometry}
+    \begin{itemize}
+        \item use interstellar plasma as billion km telescope
+        \item unprecedented angular precision: 50 picoarcseconds, 6
+          orders of magnitude improvement
+    \item ULP+2014 picked up by 19 news outlets in 5 countries, over 26k youtube hits for Swinburne animation.
+    \end{itemize}
+\includegraphics[width=4.5in]{Figures/scintillometry.eps}
+}
+
+
+  \frame{
+    \frametitle{Scintillometry}
+PSR B0834+06: 
+
+$D_S=620$pc, 
+
+$D_L=389/415$pc
+
+{\tiny Brisken+2010, Liu+2016}
+\begin{picture}(320,250)
+\put(110,90){
+\includegraphics[width=0.7\textwidth]{Figures/Fig7_without_lines_5.png} 
+}
+\end{picture}
+%\vspace{-4in}
+
+  }
+
+  \frame{
+    \frametitle{Plasma Lens Enigma}
+    \begin{itemize}
+        \item nature of lenses highly controversial
+        \item observed bending angle requires extreme plasma conditions
+        \item  exploding dark matter (Walker+2001), 
+strange quark nuggets (Perez-Garcia+2014), 
+superconducting cosmic strings
+          (Thompson+2011), current sheets (UP+2014)
+        \item distances, geometry, precisely measured
+        \item treat like 'interstellar wormhole': make use of what's
+          out there.
+    \end{itemize}
+
+  }
+
+  \frame{
+    \frametitle{Applications}
+    \begin{itemize}
+        \item so far, two pulsar Nobel prizes (on par with CMB)
+        \item potential direct detection of gravitational waves
+        \item precision tests of GR
+        \item matter at extreme conditions
+        \item probes of the ISM
+        \item huge voltage datasets, currently 500 TB.
+\vspace{-0.1in}
+    \end{itemize}
+\vspace{-0.6in}\hspace{2.9in}
+\includegraphics[width=1.5in]{Figures/BGQrack2s.jpg}
+  }
+
+  \frame{
+    \frametitle{Current Status}
+    \begin{itemize}
+    \item new network of low frequency pulsar VLBI telescopes: Penticton, Algonquin,
+      GMRT (India), LOFAR (Netherlands), MWA (Australia)
+     \item new analysis techniques: Scintillometry 
+    \end{itemize}
+  }
+
+
+
+  \frame{
+    \frametitle{Emerging Picture}
+    \begin{itemize}
+    \item grazing incidence reconnection sheets
+%    \item predicts RM gradient
+    \end{itemize}
+\begin{picture}(320,235)
+\put(10,40){
+\includegraphics[width=4.0in]{Figures/toronto-skyline.png}}
+%\put(-60,-207){
+%\includegraphics[width=5.5in]{Figures/sheetgeom.eps}}
+\end{picture}
+  }
+  \frame{
+    \frametitle{Folds}
+\begin{center}
+\includegraphics[width=3.9in]{Figures/refraction.pdf}
+\end{center}
+
+Refraction of light rays near point D.  The black lines
+  are the light paths.  The shaded region indicates the lensing sheet
+  caustic.  The angles obey Snell's Law
+  $\frac{\sin(\alpha_1)}{\sin(\alpha_2)}=\frac{\sin(\alpha_4)}{\sin(\alpha_3)}=\frac{n_{\rm sheet}}{n_{\rm
+    ISM}.$ }
+}
+
+
+  \frame{
+    \frametitle{Conclusion}
+    \begin{itemize}
+      \item last 50 years of radio astronomy revolutionized by VLBI
+        and pulsars separately
+      \item beginning of pulsar-VLBI era
+      \item VLBI Scintillometry: cosmic lenses improve measurements by
+        6 orders of magnitude
+      \item ISM structure: mapping cosmic plasma and magnetic fields
+    \end{itemize}
+  }
+
+\end{document}
