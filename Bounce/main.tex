@@ -49,7 +49,8 @@ D. Kodwani, D. Meerburg, N. Turok and more
 \frame{
 \begin{picture}(320,250)
 \put(-5,-53){
-\includegraphics[width=4.5in]{Figures/mmh.png}}
+%\includegraphics[width=4.5in]{Figures/mmh.png}
+}
 \end{picture}
 \vspace{-3in}
 \titlepage
@@ -70,42 +71,31 @@ D. Kodwani, D. Meerburg, N. Turok and more
 \frame{
     \frametitle{Cosmological Perturbations}
     \begin{itemize}
-        \item traditionally thought of as an initial value problem
-        \item challenges at specifying IVP at a singularity
+        \item traditionally thought of as an initial value problem (IVP)
+        \item challenges in specifying IVP at a singularity
         \item blinded by inflationary calculations
-     \end{itemize}
-  }
-\frame{
-    \frametitle{Example: Milne Universe decaying mode}
-   \begin{itemize}
-   \item Milne: $\Omega=0$ hyperbolic reslicing of minkowski
-\item $ds^2=-d\tau^2+\tau^2(d\chi^2/(1+\chi^2)+\chi^2 d\Omega)
-        \item Gauge transform from Minkowski
-        \item $r=\tau\chi$, $t=\tau \sqrt{1+\chi^2}$
+        \item bounce paradigm allows broader analysis
      \end{itemize}
 
   }
 
 \frame{
-    \frametitle{3-D: E-mode}
-\center{\includegraphics[width=4.3in]{Figures/delta_reco_raw.pdf}  }
-  }
-
-  \frame{
-    \frametitle{Decaying modes}
+\frametitle{Perfect Bouncing}
 \begin{itemize}
-\item test fluid in Milne (empty) space:
-\item has constant and decaying mode
-\item if viewed backward in time, decaying mode becomes growing mode!
-\item but by construction, no gravity at play.
+\item Gielen\&Turok 2016, 2017
+\item generic early universe background: radiation domination,
+  perturbations, classical and quantum
+\item compute from negative to positive (complex) scale factor
 \end{itemize}
+\includegraphics[width=2.5in]{Figures/bounce.eps}
 }
+
 
 \frame{
 \frametitle{Tensor Modes}
 \begin{itemize}
 \item regular and irregular (decaying) mode
-\item decaying mode $h_T \propto \cos(k\eta)/\eta$
+\item decaying mode $h_T \propto \cos(k\eta)/k\eta$
 \item viewed going into a bounce, appears as a superhorizon anistropy
 \item c.f. Bianchi IX, Mixmaster
 \item used as BBN constraint (Rothman\&Matzner 1984 etc)
@@ -113,25 +103,66 @@ D. Kodwani, D. Meerburg, N. Turok and more
   ($\sim 1$ MeV)
   and BBN ($\sim 0.1$ MeV), results in anistropic $\nu$ DF, and higher
   He abundance (up to 0.9).
-\item gives stronger constraint than CMB (Saadeh et al 2016)
-\end[itemize}
+\item thought to give stronger constraint than CMB (Saadeh et al 2016)
+\end{itemize}
 }
 
   \frame{
-    \frametitle{Distinguishing gravity from fluids}
+    \frametitle{Distinguishing gravity from fluid forces}
+\begin{itemize}
+\item consider crunch with perfect fluid and tensor modes only
+\item need to specify 2 tensor IC, 4 fluid IC
+\item only one of these 6 d.o.f. maps onto Bianchi
+\item consistent with Gielen and Turok leading and second order PT
+\itme numerical study could show generic behaviour in crunch
+\end{itemize}
+}
+
+\frame{
+    \frametitle{Analogy: Milne Universe decaying mode}
+   \begin{itemize}
+   \item Milne: $\Omega=0$ hyperbolic reslicing of minkowski
+\item $ds^2=-d\tau^2+\tau^2(d\chi^2/(1+\chi^2)+\chi^2 d\Omega)$
+        \item Gauge transform from Minkowski
+        \item $r=\tau\chi$, $t=\tau \sqrt{1+\chi^2}$
+     \end{itemize}
+
+  }
+
+  \frame{
+    \frametitle{Decaying modes}
+\begin{itemize}
+\item test fluid in Milne (empty) space:
+\item has constant and decaying mode
+\item if viewed in crunch, decaying mode becomes growing mode!
+\item but by construction, no gravity at play.
+\end{itemize}
+}
+
+\frame{
+  \frametitle{Scalar modes}
+\includegraphics[width=2.5in]{Figures/bounce.eps}
+}
+
+\frame{
+\frametitle{Open questions}
+\begin{itemize}
+\item non-linear superhorizon evolution
+\item backreaction?
+\item vector modes?
+\end{itemize}
+
 }
 
 \frame{
 \vspace{-0.5in}
     \frametitle{Conclusions}
     \begin{itemize}
-      \item Non-linear backward mapping: bijiective potential isobaric coordinates
-      \item most precise non-parametric reconstruction mechanism to
-          date: 1-2 orders of magnitude more linear information
-          \item computationally straightforward, mass coordinate
-            similar to Lagrangian
-        \item well suited for low shot noise low z BAO surveys,
-          i.e. intensity mapping
+      \item Bouncing cosmology allows a new and broader discussion of allowed
+        linear modes
+      \item constructive observational phenomelogy
+      \item e.g.: B modes do not necessarily constrain tensors
+      \item doubles adiabatic mode count, adds fluid d.o.f.      
      \end{itemize}
   }
 

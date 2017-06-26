@@ -1,0 +1,22 @@
+dev x11
+dev postencap bounce.eps
+
+erase
+expand 1.1
+set eta=-1,1,0.1
+set theta=0,2*3.2,0.1
+set x1=cos(theta)/10+1
+set mx1=cos(theta)/10-1
+set y1=sin(theta)
+set a=eta
+limits  -1.2 1.2 -1.8 1.8
+lweight 2
+connect eta a
+set ma=-a
+connect eta ma
+connect x1 y1
+connect mx1 y1
+box 1 2 4 4
+xlabel \eta
+ylabel scale factor (a)
+#toplabel bounce
