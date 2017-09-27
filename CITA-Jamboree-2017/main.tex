@@ -1,0 +1,130 @@
+\documentclass[graphics]{beamer}
+\usepackage{xcolor}
+\usepackage{graphicx}
+\usepackage{verbatim}
+\usepackage{wrapfig}
+\usepackage{tabularx}
+\usepackage{multirow}
+\usepackage{amssymb}
+\usepackage{pifont}
+\usepackage{tikz}
+\def\Checkmark{\tikz\fill[scale=0.2](0,.35) -- (.25,0) -- (1,.7) -- (.25,.15) -- cycle;} 
+
+\useoutertheme{shadow}
+%\usecolortheme{orchid}
+\usecolortheme{seahorse}
+\newcommand{\cmark}{\text{\ding{51}}}
+%\newcommand*{\GtrSim}{\smallrel\gtrsim}
+
+% math commands
+\newcommand{\be}{\begin{eqnarray}}
+\newcommand{\ee}{\end{eqnarray}}
+\newcommand{\beq}{\begin{equation}}
+\newcommand{\eeq}{\end{equation}}
+\def\simless{\mathbin{\lower 3pt\hbox
+      {$\rlap{\raise 5pt\hbox{$\char'074$}}\mathchar"7218$}}}
+\def\simgreat{\mathbin{\lower 3pt\hbox
+      {$\rlap{\raise 5pt\hbox{$\char'076$}}\mathchar"7218$}}} %> or of order
+
+% variables
+
+\def\toonscale{0.45}
+\def\mboxy#1{\mbox{\small #1}}
+
+\defbeamertemplate*{title page}{customized}[1][]
+{
+  \usebeamerfont{title}\inserttitle\par
+  \usebeamerfont{subtitle}\usebeamercolor[fg]{subtitle}\insertsubtitle\par
+  \bigskip
+  \usebeamerfont{author}\insertauthor\par
+  \usebeamerfont{institute}\insertinstitute\par
+  \usebeamerfont{date}\insertdate\par
+  \usebeamercolor[fg]{titlegraphic}\inserttitlegraphic
+}
+\begin{comment}
+\AtBeginSection[]{
+  \frame{
+    \frametitle{Outline}
+    \tableofcontents[currentsection]
+  }
+}
+\end{comment}
+
+
+\title{\textcolor{white}{FRB speculations}}
+%\subtitle{}
+\author[U. Pen]{{
+\textcolor{green}{\small Ue-Li Pen, CITA}
+}
+\\[8mm] 
+}
+\date{\textcolor{green}{Sept 27, 2017}}
+
+
+\begin{document}
+
+\frame{
+\vspace{-0.5in}
+\begin{center}  
+%\includegraphics[width=4.4in]{Figures/IMG-0438-by-Andre-cropped.jpg}
+\end{center}
+\begin{picture}(320,250)
+\put(-35,6){
+\includegraphics[width=5.1in]{Figures/IMG-7749-ARO-crop.JPG}
+}
+\end{picture}
+\vspace{-4in}
+\\
+%image credit: NRAO/AUI/NSF
+\\
+\vspace{1in}
+\titlepage
+}
+
+%\section*{Introduction}
+\section{Introduction}
+
+\begin{comment}
+  \subsection{Outline}
+
+  \frame{
+    \frametitle{Outline}
+    \tableofcontents
+  }
+\end{comment}
+
+  \frame{
+    \frametitle{FRBs}
+    \begin{itemize}
+      \item learned: scattering in host (not IGM/CGM), polarization, repetition
+      \item unknown: object type, cosmological role
+      \item controversial statistics: host DM, Log N/Log S: Euclidean?
+        Frequency dependence? latitude dependence?
+        Scattering? Repetition rate? 
+      \item Lensing!
+      \item depolarization?
+    \end{itemize}
+  }
+
+
+  \frame{
+    \frametitle{Questions resolved}
+    \begin{itemize}
+    \item scattering not intervening galaxy or IGM: FRB110523 (Masui et al 2015)
+    \item some FRBs repeat
+     \item VLBI holds key
+    \end{itemize}
+  }
+
+\frame{
+\frametitle{Near term future}
+\begin{itemize}
+\item interferometer detections: Molonglo, ASKAP, APERTIF, CHIME
+\item increase sample from dozens to thousands
+\item localize bright, nearby ones with VLBI, identify counterparts:
+  SNe? BH? optical counterparts?
+\item GRB's took 50 years to settle -- hopefully FRB's will be much faster
+\end{itemize}
+}
+
+\end{document}
