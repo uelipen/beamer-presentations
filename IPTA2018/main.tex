@@ -1,4 +1,6 @@
 \documentclass{beamer}
+\usepackage{media9}
+%\usepackage{movie15}
 
 
 %\usepackage{graphicx}
@@ -34,9 +36,9 @@
 
 \title{PTA Confusion}
 \subtitle{Resolution, Source Confusion and Stochasticity in Pulsar Timing Arrays}
-\author[Boyle and Pen]{Latham Boyle and Ue-Li Pen \\[8mm] 
+\author[Boyle and Pen]{Ue-Li Pen, Latham Boyle ++ \\[8mm] 
 }
-\date{Max-Planck-Institut f\"ur Radioastronomie, 16. August, 2010}
+\date{IPTA 2018, June 22, 2018}
 
 
 \begin{document}
@@ -57,25 +59,78 @@
 
   \subsection{PTA}
   \frame{
-    \frametitle{Dectecting Gravity Waves}
+    \frametitle{Redshift maps}
     \begin{itemize}
-	\item Theorist's picture: measure timing residuals along
-          various lines of sights to pulsars      
-	\item two modes: distance to pulsar known (3-D), or unknown
-          (2-D)
-        \item make 2-D or 3-D map of strain on the sky as a function
-          of gravity wave period.
-        \item extension of Boyle 2010 ``Porcupine'' detector formalism
-          (mega-ligo) 
+	\item Boyle+UP 2012, Roebber+Holder 2017
+	\item Densely sampled limit:
+        \item ToA map: 3-D
+        \item FFT into complex 2-D map at each frequency
     \end{itemize}
   }
+  \frame{
+    \frametitle{Redshift Image}
+%    \begin{minipage}{0.6\linewidth}
+    \vspace{-0.2in}
+    \begin{itemize}
+    \item \mboxy{$\delta t = \sin(2\phi)[1+\cos(\theta)]$}
+    \end{itemize}
+%    \end{minipage}
+    \begin{minipage}{0.35\linewidth}
+%      \includegraphics[scale=0.25]{Figures/residual}
+%\visible{\includemovie[poster,text={\small(Loading
+%    Video...)}]{6cm}{4cm}{Figures/residual.mp4}}
+
+\includemedia[
+  label=some_dice,
+  width=3.0\linewidth,height=1.35\linewidth, % 16:9
+  addresource=Figures/residual.mp4, 
+  transparent,
+  activate=pageopen,
+  passcontext,
+  flashvars={
+    source=Figures/residual.mp4
+   &autoPlay=true % start playing on activation
+   &loop=true
+  }
+]{}{VPlayer.swf} 
+% loop video
+\mediabutton[
+  mediacommand=some_dice:playPause,
+  overface=\color{blue}{\fbox{\strut Play/Pause}},
+  downface=\color{red}{\fbox{\strut Play/Pause}}
+]{\fbox{\strut Play/Pause}}
+\mediabutton[
+  mediacommand=some_dice:setSource [(filename.mp4)]
+]{\fbox{\strut 
+}}
+
+
+    \end{minipage}
+    \hspace{0.02\linewidth}
+    
+        singular spatial structure near GW source, no residual in
+    anti-direction (TT).  
+
+    }
+
+  \frame{
+    \frametitle{Two sources}
+      \vspace{0.5cm}
+      \includegraphics[scale=0.35]{Figures/residual2}
+    \begin{itemize}
+      \item Well resolved by dense PTA
+    \end{itemize}
+    }
+
+
 
   \subsection{2-D}
 
   \frame{
     \frametitle{Background}
     \begin{itemize}
-      \item traditional technique: measure 2 point correlation function of residuals (Jenet, etc).
+      \item traditional technique: measure 2 point correlation
+        function of residuals (Hellings-Downs, Jenet, etc).
       \item equivalent to power spectrum
       \item potentially very non-optimal for point sources -- c.f.
         hubble deep field.
@@ -132,34 +187,6 @@ over all pulsar distances.  Well known result.
     \end{itemize}
   }
 
-  \frame{
-    \frametitle{Residual Image}
-%    \begin{minipage}{0.6\linewidth}
-    \vspace{-0.2in}
-    \begin{itemize}
-    \item \mboxy{$\delta t = \sin(2\phi)[1+\cos(\theta)]$}
-    \end{itemize}
-%    \end{minipage}
-    \begin{minipage}{0.35\linewidth}
-      \includegraphics[scale=0.25]{residual}
-    \end{minipage}
-    \hspace{0.02\linewidth}
-    
-    
-    singular spatial structure near GW source, no residual in
-    anti-direction (TT).  
-    }
-
-  \frame{
-    \frametitle{Two sources}
-      \vspace{0.5cm}
-      \includegraphics[scale=0.25]{residual2}
-    \begin{itemize}
-      \item Well resolved by dense PTA
-    \end{itemize}
-    }
-
-
 
   \subsection{Finite Corrections}
 
@@ -175,23 +202,6 @@ over all pulsar distances.  Well known result.
     \end{itemize}
   }
       
-  \frame{
-    \frametitle{Sensitivity}
-    \begin{itemize}
-    \item 20 resolution pixels without loss of sensitivity:
-    \item 5 quadrupoles, 2 polarizations, 2 front-back
-    \item most models have resolvable brightest source with
-      factor of 20 boost (Sesana et al 2008)
-    \item stochastic  non-optimal
-    \item with $> 20$ sources, resolvability relies on pulsars near
-      the GW source 
-    \item depends on luminosity distribution, etc
-    \item only valid is $N_{\rm pulsar}>N_{\rm resolution}$
-    \item Poisson model results in $\sim 2$ gain in sensitivity,
-      depends on pulsar spatial and timing noise distribution.
-    \end{itemize}
-  }
-
 
   \subsection{Statistics}
 
@@ -211,20 +221,6 @@ over all pulsar distances.  Well known result.
     \item Instead, fit for individual source gravity wave templates
     \end{itemize}    
   }
-  \frame{
-    \frametitle{2-PCF}
-    \begin{itemize}
-    \item What went wrong with 2-PCF confusion analysis?
-    \item in the map confused limit, 2-PCF is optimal.
-    \item apply 2-PCF to test for confusion: concluded that it is
-      source confused, and therefore optimal.
-    \item Logic fails because confusion must hold at map/pixel level for
-      2-PCF to be optimal.
-    \item 2-PCF confusion does not imply map confusion!
-    \item other sources of Gaussian non-optimality studied
-      (e.g. Sasana and Vecchio 2010, van Haasteren 2009)
-    \end{itemize}    
-  }
 
   \section{3-D imaging}
   \subsection{GW interferometry}
@@ -241,24 +237,11 @@ over all pulsar distances.  Well known result.
   \frame{
     \frametitle{Distance measurement}
     \begin{itemize}
-    \item direct parallax: current best VLBI pulsar distances to $\delta \alpha \sim 20 \mu$ sec. 
-    \item need $\delta r = r \delta \alpha \frac{r}{r_{
-          \rm AU}} < 3pc$
-    \item current techniques accessible to $r \lesssim 200$ pc.
-    \item limited by availability of bright nearby VLBI calibrators,
-        flux, ionosphere, troposphere, etc.
-      \item substantial improvements in principle possible with more
-        sensitivity.  Perhaps $r \sim $kpc for SKA?
-    \end{itemize}
-  }
-  \frame{
-    \frametitle{Interferometric Self-cal}
-    \begin{itemize}
-    \item In radio interferometry, position of detectors can be solved
-      from data.
-    \item For single monochromatic source, distance to pulsar is
-      degenerate modulo wavelength
-    \item broken by multiple sources, and/or period change.
+    \item VLBI Scintillometry: demonstrated 10 pico arcsecond astrometry
+      (Pen++2014)
+    \item ongoing test in known systems
+    \item most promising for binary systems
+    \item low frequency VLBI monitoring: LOFAR, GMRT, LWA, MWA, etc
     \end{itemize}
   }
 

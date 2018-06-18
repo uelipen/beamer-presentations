@@ -1,4 +1,4 @@
-SDIR = .#sequence
+SDIR = Figures#.#sequence
 MDIR = figures
 EXTDIR = external
 
