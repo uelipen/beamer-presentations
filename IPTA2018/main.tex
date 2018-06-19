@@ -62,11 +62,13 @@
     \frametitle{Redshift maps}
     \begin{itemize}
 	\item Boyle+UP 2012, Roebber+Holder 2017
-	\item Densely sampled limit:
-        \item ToA map: 3-D
+	\item Densely sampled limit
+        \item ToA map: angle+time data cube
         \item FFT into complex 2-D map at each frequency
     \end{itemize}
   }
+\section{Gravity Wave Image}
+
   \frame{
     \frametitle{Redshift Image}
 %    \begin{minipage}{0.6\linewidth}
@@ -116,7 +118,7 @@
   \frame{
     \frametitle{Two sources}
       \vspace{0.5cm}
-      \includegraphics[scale=0.35]{Figures/residual2}
+      \includegraphics[scale=0.32]{Figures/residual2}
     \begin{itemize}
       \item Well resolved by dense PTA
     \end{itemize}
@@ -134,17 +136,9 @@
       \item equivalent to power spectrum
       \item potentially very non-optimal for point sources -- c.f.
         hubble deep field.
-      \item new ``imaging'' approach
-      \item initial detections will be most sensitive for
-        $\lambda_{\rm GW} \sim t_{\rm obs}$.  We will study this limit.
-      \item start with the limit of a dense sample of pulsars, and ask
-        what happens as density is reduced
-      \item should reduce to previously known limits w.r.t. confusion
-        (e.g. Sesana et al 2008)
     \end{itemize}
   }
 
-\section{Gravity Wave Image}
 
 \subsection{Residual}
 \frame{
@@ -174,18 +168,6 @@ reduces to $\delta t = \sin(2\phi)[1+\cos(\theta)]$ when averaging
 over all pulsar distances.  Well known result.
 }
 
-  \subsection{E-M Analogue}
-
-  \frame{
-    \frametitle{Radio Interferometers}
-    \begin{itemize}
-      \item Measures electric field $E_i$, v.s. strain $h_{ij}$
-      \item Transverse wave
-      \item Image (radiation power) detection is quadratic in $E$ (or $h$)
-      \item stationary in time, fourier modes
-      \item Source power spectrum is quadratic in image, quartic in field.
-    \end{itemize}
-  }
 
 
   \subsection{Finite Corrections}
@@ -203,24 +185,7 @@ over all pulsar distances.  Well known result.
   }
       
 
-  \subsection{Statistics}
-
-  \frame{
-    \frametitle{Forecasts}
-    \begin{itemize}
-    \item Jenet et al  measure the spatial 2-PCF of timing
-      residuals at fixed wavelength
-    \item $\xi(\theta)=\langle \delta t(0) \delta t(\theta) \rangle$
-      fixed at single source $\theta=0$
-    \item expectation value of $\langle \xi \rangle = \frac{3}{2} x \log x-\frac{x}{4}+\frac{1}{2}$, where $x=[1-\cos(\theta)]/2$
-    \item erases the singular structures
-    \item then weight $\int \xi \langle \xi \rangle dx$
-    \item only optimal if average strain is 20 times larger than peak
-      strain.
-    \item factor of 20 was assumed to be order unity
-    \item Instead, fit for individual source gravity wave templates
-    \end{itemize}    
-  }
+%  \subsection{Statistics}
 
   \section{3-D imaging}
   \subsection{GW interferometry}
@@ -249,18 +214,16 @@ over all pulsar distances.  Well known result.
   \frame{
     \frametitle{Conclusions}
     \begin{itemize}
-    \item Confusion spatial resolution of 2-D PTA: $<$ 90 degrees for
-      all cases, $< 5$ degrees for dense sampling. Timing residual map
+    \item PTA has potential to be high resolution GW telescope    
+    \item Timing residual map
       has rich spatial structure, which is erased in correlation
       function analysis.
     \item 3-D: $\sim \frac{10'}{\rm SNR}$
     \item Changes physical interpretation of PTA GW signals: unlikely
       to be in stochastic regime.  2-PCF confusion analysis is
       self-fulfilling prophecy.
-    \item PTA has potential to be high resolution GW telescope
-    \item motivation for precision pulsar VLBI paralax
-    \item  cylinder transit surveys  may accelerate pulsar search
-      (c.f. Kaspi, Ransom)
+    \item sellable feature: orders of magnitude more precise in angle than LIGO
+    \item motivation for precision pulsar VLBI scintillometry distances
     \end{itemize}
   }
 \end{document}
