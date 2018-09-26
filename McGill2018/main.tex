@@ -70,8 +70,9 @@
 \vspace{-0.5in}
     \frametitle{Neutrinos}
     \begin{itemize}
-    \item defies expectations: existence, 
-        \item minimum mass 0.05 eV: $\Omega_\nu \sim 10^{-3} \ll \Omega_b$
+    \item defy expectations: existence, mass, oscillation, large
+      mixing angles -- fruitful discvery space
+        \item minimum mass 0.06 eV: $\Omega_\nu \sim 10^{-3} \ll \Omega_b$
         \item most massive neutrino non-relativistic today, affects LSS
         \item normal or inverted hierarchy?
         \item cosmological probes: how to disentangle such a small
@@ -83,9 +84,9 @@
   \frame{
     \frametitle{Observables}
     \begin{itemize}
-        \item CMB, gravitational lensing: 2-D projection
+        \item CMB, gravitational lensing: 2-D projection, 
         \item galaxies: 3-D biased displacement field
-        \item Monger-Ampere equation/solution
+        \item Monge-Amp\'ere equation/solution
         \item ideally measure 2 fields, infer 2 fields: CDM, neutrinos (HDM)
     \end{itemize}
 \vspace{-0.1in}\hspace{.3in}
@@ -105,7 +106,7 @@
      \end{itemize}
 }
 \frame{
-    \frametitle{3-D: E-mode}
+    \frametitle{Observable}
 \includegraphics[width=4.1in]{Figures/M51s.jpg}  
 
 (M51, from Wikipedia)
@@ -116,24 +117,14 @@
     \begin{itemize}
         \item 1st order effect from misalignment of moment of inertia
           and tidal tensor
-        \item $\tau=\int \rho \bf{r} \cross \grad \phi$
-        \item $\tau_i=\epsilon_{ijk} \int \rho x^j
-          x^l \partial_l\partial_k\phi $
-        \item $\tau= I \cdot T$
+        \item $\tau\equiv\int \rho \bf{r} \times \nabla \phi$
+        \item $\tau_i=\epsilon_{ijk} \int \rho x^jx^l \partial_l\partial_k\phi \equiv\epsilon_{ijk} I_{il}T_{lk}$
+        \item $\tau= * I \cdot T$
+        \item first realized by S. White (1984), see also LP00
      \end{itemize}
 }
 
 
-\frame{
-\vspace{-0.5in}
-    \frametitle{1-D bijective potential isomass coordinate}
-    \begin{itemize}
-        \item McQuinn\&White 2016
-        \item unique mass coordinate
-        \item closest non-parametric reconstruction (Zhu et al 2016)
-     \end{itemize}
-\includegraphics[width=4.21in]{Figures/gaussian_pert.pdf}  
-  }
 \frame{
     \frametitle{3-D: E-mode}
 %\vspace{-0.5in}
@@ -160,7 +151,9 @@
     \partial_\nu \dot{\phi})&=&\langle\rho\rangle-\rho \sqrt{g}
 \label{eqn:dif}
 \end{eqnarray}
-Solve Monge-Amp\'ere eqn (\ref{eqn:dif}) using multigrid (Pen 1995)
+Solve Monge-Amp\'ere eqn (\ref{eqn:dif}) using multigrid (Pen 1995):
+unique bijective mass coordinate.  See also Schmidtfull, Wang, Seljak,
+Zaldarriaga ++
 }
 
   \frame{
@@ -180,31 +173,47 @@ Zhu et al 1610.09638
 }
   \frame{
     \frametitle{Halos}
-\vspace{-4in}\hspace{-0.5in}\includegraphics[width=5.0in]{Figures/map_both_150.pdf}
-
-Voronoi tiling, Yu et al (2016, in prep)
-}
-  \frame{
-    \frametitle{Halos}
 \vspace{-0.5in}\hspace{-0.9in}\includegraphics[width=5.0in]{Figures/halocc.pdf}
 }
 
-  \frame{
-\vspace{-0.5in}
-    \frametitle{low z, low noise, 21cm Surveys}
+ \frame{
+    \frametitle{Predicting Neutrino Torques}
     \begin{itemize}
-        \item tunable: Parkes, Tianlai, BINGO
-        \item Highjacking: Apertif, GMRT, ASKAP, SKA
+      \item $\Delta x (q) = q^j \partial_i\partial_j \psi$
+        \item $I_c \sim T_c$: both describe particle displacement
+        \item $j_\nu = \epsilon T_c T_\nu$
+        \item Neutrino tidal torque is predictable observable from
+          displacement potential
      \end{itemize}
   }
 
+ \frame{
+    \frametitle{Size estimate}
+    \begin{itemize}
+    \item $|j_\nu/j_c| \sim 10^{-4} (f_\nu /0.003) (\sqrt{P(k_{\rm FS})/P(k_{\rm vir})}/0.03$
+    \item agrees with simulation measurement
+    \item need $n> 10^8$ galaxy spins
+    \item accessible in next generation 21cm surveys
+     \end{itemize}
+  }
+
+
   \frame{
 \vspace{-0.5in}
-    \frametitle{Science applications}
+    \frametitle{Future 21cm Surveys}
     \begin{itemize}
-        \item BAO
-        \item standard ruler (Alcock-Paczynski effect)
-        \item 
+        \item expand on HSHS (Peterson et al 2006), CHIME
+        \item build on economy of scale, map $10^{11}$ galaxies
+     \end{itemize}
+  }
+  
+\frame{
+\vspace{-0.5in}
+    \frametitle{More cosmological applications}
+    \begin{itemize}
+        \item map initial (linear) tidal field
+        \item BAO, standard ruler (Alcock-Paczynski effect)
+        \item modified gravity, time evolving neutrino mass
      \end{itemize}
   }
 
@@ -213,14 +222,14 @@ Voronoi tiling, Yu et al (2016, in prep)
 \vspace{-0.5in}
     \frametitle{Conclusions}
     \begin{itemize}
-      \item Non-linear forward evolution: Neutrinos, halos, differential effects
-      \item Non-linear backward mapping: bijiective potential isomass coordinates
-      \item most precise non-parametric reconstruction mechanism to
-          date
-          \item computationally straightforward, mass coordinate
+      \item galaxy spins: new probe of initial conditions
+      \item predictable from observable displacement field using
+        non-linear reconstruction
+      \item computationally straightforward, mass coordinate
             similar to Lagrangian
-        \item well suited for low shot noise low z BAO surveys,
-          i.e. intensity mapping
+          \item already observable, scalable to much larger surveys
+          \item enables measurement of 2 cosmic scalar fields:
+            potential beat cosmic variance limits, etc
      \end{itemize}
   }
 
