@@ -1,3 +1,4 @@
+% ref https://watermark.silverchair.com/sty2376.pdf?token=AQECAHi208BE49Ooan9kkhW_Ercy7Dm3ZL_9Cf3qfKAc485ysgAAAjYwggIyBgkqhkiG9w0BBwagggIjMIICHwIBADCCAhgGCSqGSIb3DQEHATAeBglghkgBZQMEAS4wEQQMqatTTvMLMeegjcbTAgEQgIIB6fWIwe_-r_37FxhDoB466CgjHacBLCPd9FLrsRKFDluvwG7uQqZvWpERoHuI0txiA8UjcCV7Ur6Erx7GnGzvBOxxghVqVMiKQJBr5gGUXC4mHBXFLAiVJ9I4p1fiZJexlkVv1DoS87Ps2jNzd1IswV7m2eSGzCKvOJetgVzLt9fDRD_pKf4hiPjXUHg2n6HrrWQfxPQhIwVWGodV7qdqoaJf21p9mZzgkf0DC1QfBbDL9nHq5hw9v9gn87amGpypYXaFekjU5Jr2zxaOVz8Be9J9fwi5ibk8btjayMsdT2j606m8cI65dZni1yJJuIkHNUT8WoAy5_l0J8s1la6OyovXTPEo66LdflI75_oMbh8eoNXrHm0GLKYTCA6csdLSA2UxuopXHhUraANRaM1UZ8mjOd-h1BcPmUgKcXXZtmEod54szQwMa7fLPX0VoJDAMT_I55tsJsDEoMIq1BWgShnxK5bgKPcl65GoguDjzf10FWCMcH3qtysJ3i4HZ4Lx9TzyI8eUEWilIGr3txiKxEnfE-g0wsNaY7icIx5U4PnsxYaU8tQKsCHQyNLlS1RgYYdzxl_kfStVNsLicP0dmCcWwpbAoSdWmewr-fZIc2NMrM2Y92GjgBn_lXDwICiy7hDTgNpjS4iMug
 \documentclass[graphics]{beamer}
 
 \usepackage{graphicx}
@@ -36,7 +37,7 @@
 \title{Neutrino Torques
 }
 \subtitle{}
-\author[U. Pen]{\textcolor{green}{H. Yu, X. Wang}
+\author[U. Pen]{\textcolor{green}{Ue-Li Pen, H. Yu, X. Wang}
 \\[8mm] 
 }
 \date{October 26, 2018}
@@ -103,6 +104,13 @@
         \item dust lanes, trailing spiral arms, HI velocity (rotation) field
      \end{itemize}
 }
+\frame{
+    \frametitle{3-D: E-mode}
+\includegraphics[width=4.1in]{Figures/M51s.jpg}  
+
+(M51, from Wikipedia)
+  }
+
   \frame{
     \frametitle{Angular momentum}
     \begin{itemize}
@@ -111,7 +119,7 @@
         \item $\tau=\int \rho \bf{r} \cross \grad \phi$
         \item $\tau_i=\epsilon_{ijk} \int \rho x^j
           x^l \partial_l\partial_k\phi $
-        \item $\tau= I \cdot T
+        \item $\tau= I \cdot T$
      \end{itemize}
 }
 
@@ -152,7 +160,7 @@
     \partial_\nu \dot{\phi})&=&\langle\rho\rangle-\rho \sqrt{g}
 \label{eqn:dif}
 \end{eqnarray}
-Solve diffusion eqn (\ref{eqn:dif}) using multigrid (Pen 1995)
+Solve Monge-Amp\'ere eqn (\ref{eqn:dif}) using multigrid (Pen 1995)
 }
 
   \frame{
@@ -169,16 +177,6 @@ Zhu et al 1610.09638
   \frame{
     \frametitle{Low noise limit}
 \includegraphics[width=3.4in]{Figures/rk.pdf}
-}
-  \frame{
-    \frametitle{BAO}
-\includegraphics[width=3.4in]{Figures/dlnpk_dlns.png}
-
-}
-  \frame{
-    \frametitle{FoM}
-\includegraphics[width=3.4in]{Figures/bao_err_norm4_intp_logy.png}
-
 }
   \frame{
     \frametitle{Halos}
@@ -204,9 +202,9 @@ Voronoi tiling, Yu et al (2016, in prep)
 \vspace{-0.5in}
     \frametitle{Science applications}
     \begin{itemize}
-        \item BAO: maximize leverage from low-z where dark energy dominates
-        \item neutrino wake dipole
-        \item RSD
+        \item BAO
+        \item standard ruler (Alcock-Paczynski effect)
+        \item 
      \end{itemize}
   }
 
