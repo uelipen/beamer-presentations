@@ -1,0 +1,171 @@
+\documentclass[graphics]{beamer}
+
+\usepackage{graphicx}
+\usepackage{verbatim}
+\usepackage{wrapfig}
+\useoutertheme{shadow}
+%\usecolortheme{orchid}
+\usecolortheme{seahorse}
+
+
+% math commands
+\newcommand{\be}{\begin{eqnarray}}
+\newcommand{\ee}{\end{eqnarray}}
+\newcommand{\beq}{\begin{equation}}
+\newcommand{\eeq}{\end{equation}}
+\def\simless{\mathbin{\lower 3pt\hbox
+      {$\rlap{\raise 5pt\hbox{$\char'074$}}\mathchar"7218$}}}
+\def\simgreat{\mathbin{\lower 3pt\hbox
+      {$\rlap{\raise 5pt\hbox{$\char'076$}}\mathchar"7218$}}} %> or of order
+
+% variables
+
+\def\toonscale{0.45}
+\def\mboxy#1{\mbox{\small #1}}
+
+
+\begin{comment}
+\AtBeginSection[]{
+  \frame{
+    \frametitle{Outline}
+    \tableofcontents[currentsection]
+  }
+}
+\end{comment}
+
+\title{CHIME DM statistics
+}
+\subtitle{}
+\author[U. Pen]{\textcolor{green}{Ue-Li Pen
+}
+\\[8mm] 
+}
+\date{March 5, 2019}
+
+
+\begin{document}
+
+\frame{
+\begin{picture}(320,250)
+\put(-30,-110){
+\includegraphics[width=5.5in]{Figures/map0512-0128_i1500_.png}}
+\end{picture}
+\vspace{-3in}
+\titlepage
+}
+
+%\section*{Introduction}
+
+
+\begin{comment}
+  \subsection{Outline}
+
+  \frame{
+    \frametitle{Outline}
+    \tableofcontents
+  }
+\end{comment}
+
+
+  \frame{
+\vspace{-0.5in}
+    \frametitle{DM: local to FRB vs IGM}
+    \begin{itemize}
+      \item scenario local: all DM from FRB neighborhood
+      \item predicts P(V/Vmax)=const for all DM bins
+      \item DM PDF not predicted
+     \end{itemize}
+  }
+
+  \frame{
+\vspace{-0.5in}
+    \frametitle{DM: local to FRB vs IGM}
+    \begin{itemize}
+      \item scenario IGM: all DM from IGM
+      \item allows direct measurement of luminosity function from 1/Vmax
+      \item predicts P(V/Vmax) and P(DM) from the one measured
+        function
+      \item we measure P(V/Vmax,DM), in both cases one free function: overconstrained
+     \end{itemize}
+  }
+
+  \frame{
+\vspace{-0.5in}
+    \frametitle{Vmax}
+    \begin{itemize}
+      \item consider all L2 triggers above SNR=10 $\sigma$: we may be complete
+      \item volume $V=r^3$ bounded by burst
+      \item max volume to which it could have been seen $V_{\rm max}\equiv V {\rm SNR/10}^{3/2}$
+      \item in Euclidean universe, random variable $X\equiv V/V_{\rm
+          max}$ is uniform distributed
+     \end{itemize}
+  }
+
+
+  \frame{
+    \frametitle{Vmax}
+\includegraphics[width=3.4in]{Figures/frbdm.pdf}
+}
+
+
+  \frame{
+    \frametitle{Vmax}
+\includegraphics[width=3.4in]{Figures/frbdmrank.pdf}
+}
+  \frame{
+    \frametitle{DM}
+\includegraphics[width=3.4in]{Figures/frbdmhist.pdf}
+}
+
+  \frame{
+\vspace{-0.5in}
+    \frametitle{Luminosity function}
+    \begin{itemize}
+      \item if $z=$DM/1000
+      \item low DM events measure faint end
+      \item high DM events measure bright end
+      \item cosmic evolution important around DM>500
+      \item evolution neglible at DM<400
+      \item $N(>L)=\sum_{>L} 1/V_{\rm max}$ (Eke+ 1996)
+     \end{itemize}
+  }
+
+
+  \frame{
+    \frametitle{Luminosity}
+\includegraphics[width=3.4in]{Figures/lfn.pdf}
+}
+
+
+  \frame{
+\vspace{-0.5in}
+    \frametitle{V/Vmax}
+    \begin{itemize}
+      \item Luminosity function predicts V/Vmax distribution
+      \item strong deviation from -3/2 implies more bright bursts
+     \end{itemize}
+  }
+
+  \frame{
+    \frametitle{V/Vmax}
+\includegraphics[width=3.4in]{Figures/frbvmax.pdf}
+}
+
+\frame{
+\vspace{-0.5in}
+    \frametitle{Conclusions}
+    \begin{itemize}
+        \item IGM DM negligble allowed by data
+        \item distance dominated by DM only allowed if CHIME sample is
+          order of magnitude incomplete at low DM.
+        \item shallow luminosity function inferred from DM
+          distribution not allowed by Vmax, out-of-beam data
+        \item likely redshift $z\sim 0.02$, should yield strong cross
+          correlation with 2MRS, SDSS main sample.
+        \item can be done by anyone in the world that scans the
+          Amsterdam plot
+     \end{itemize}
+  }
+
+
+\end{document}
