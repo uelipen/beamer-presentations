@@ -1,4 +1,4 @@
-SDIR = sequence
+   SDIR = sequence
 MDIR = Figures
 
 EPSPROG = epstopdf
