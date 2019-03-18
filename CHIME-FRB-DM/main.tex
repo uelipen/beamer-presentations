@@ -46,11 +46,6 @@
 \begin{document}
 
 \frame{
-\begin{picture}(320,250)
-\put(-30,-110){
-\includegraphics[width=5.5in]{Figures/map0512-0128_i1500_.png}}
-\end{picture}
-\vspace{-3in}
 \titlepage
 }
 
@@ -69,10 +64,24 @@
 
   \frame{
 \vspace{-0.5in}
+    \frametitle{Summary preview}
+    \begin{itemize}
+      \item CHIME data at face value suggests dominant DM intrinsic to host/MW,
+        not intergalactic
+      \item need to understand potential instrumental biases: DM, SNR
+      \item impacts FRB interpretation substantially
+      \item in tension with ASKAP localizations, which at face value implies
+        small host/MW contributions
+        \item starting point to better understand our data
+     \end{itemize}
+  }
+
+  \frame{
+\vspace{-0.5in}
     \frametitle{DM: local to FRB vs IGM}
     \begin{itemize}
       \item scenario local: all DM from FRB neighborhood
-      \item predicts P(V/Vmax)=const for all DM bins
+      \item predicts P(V/Vmax)=1 for all DM bins
       \item DM PDF not predicted
      \end{itemize}
   }
@@ -95,37 +104,39 @@
     \begin{itemize}
       \item consider all L2 triggers above SNR=10 $\sigma$: we may be complete
       \item volume $V=r^3$ bounded by burst
-      \item max volume to which it could have been seen $V_{\rm max}\equiv V {\rm SNR/10}^{3/2}$
+      \item max volume to which it could have been seen $V_{\rm
+          max}\equiv  (\frac{\rm SNR}{10})^{3/2} V$
       \item in Euclidean universe, random variable $X\equiv V/V_{\rm
           max}$ is uniform distributed
+          \item Vmax statistics robust against beam variations, etc.
      \end{itemize}
   }
 
 
   \frame{
     \frametitle{Vmax}
-\includegraphics[width=3.4in]{Figures/frbdm.pdf}
+\includegraphics[width=3.3in]{Figures/frbdm.pdf}
 }
 
 
   \frame{
     \frametitle{Vmax}
-\includegraphics[width=3.4in]{Figures/frbdmrank.pdf}
+\includegraphics[width=3.3in]{Figures/frbdmrank.pdf}
 }
   \frame{
-    \frametitle{DM}
-\includegraphics[width=3.4in]{Figures/frbdmhist.pdf}
+\vspace{-0.5in}    \frametitle{DM}
+\includegraphics[width=3.6in]{Figures/frbdmhist.pdf}
 }
 
   \frame{
 \vspace{-0.5in}
     \frametitle{Luminosity function}
     \begin{itemize}
-      \item if $z=$DM/1000
+      \item for IGM, $z\sim $DM/1000
       \item low DM events measure faint end
       \item high DM events measure bright end
-      \item cosmic evolution important around DM>500
-      \item evolution neglible at DM<400
+      \item cosmic evolution important around DM$>500$
+      \item evolution small at DM$<400$
       \item $N(>L)=\sum_{>L} 1/V_{\rm max}$ (Eke+ 1996)
      \end{itemize}
   }
@@ -138,46 +149,42 @@
 
 
   \frame{
-\vspace{-0.5in}
-    \frametitle{V/Vmax}
+%\vspace{-0.5in}
+    \frametitle{More bright bursts?}
     \begin{itemize}
       \item Luminosity function predicts V/Vmax distribution
-      \item strong deviation from -3/2 implies more bright bursts
+      \item strong deviation from -3/2 implies more bright bursts than observed
      \end{itemize}
   }
 
   \frame{
-    \frametitle{V/Vmax}
+ \vspace{-0.25in}
+   \frametitle{V/Vmax}
 \includegraphics[width=3.4in]{Figures/frbvmax.pdf}
 }
 
-
- \frame{
+  \frame{
 \vspace{-0.5in}
-    \frametitle{Broader Context}
-    \begin{itemize}
-      \item Li+ 1902.10120 find 6$\sigma$ cross correlation of ASKAP
-        with HIPASS/2MRS, $z\sim 0.007$. Significance $\sim 10^{-8}$
-      \item ASKAP claimed localizations would imply near IGM distance
-        limit, statistical significance lower.
-     \end{itemize}
-  }
+    \frametitle{YMW correction}
+\includegraphics[width=3.4in]{Figures/dmymw.pdf}
+}
 
 \frame{
 \vspace{-0.5in}
     \frametitle{Conclusions}
     \begin{itemize}
-        \item IGM DM negligble allowed by data
-        \item distance dominated by DM only allowed if CHIME sample is
-          order of magnitude incomplete at low DM.
+        \item IGM DM negligible allowed by data
+        \item distance dominated by DM only allowed if Luminosity
+          function is $L^{-1.5}$ AND CHIME sample is
+          order of magnitude incomplete at low DM, AND galactic DM
+          variation hidden by scattering.
         \item shallow luminosity function inferred from DM
-          distribution not allowed by Vmax, out-of-beam data
-        \item likely redshift $z\sim 0.02$, should yield strong cross
+          distribution not allowed by Vmax, also out-of-beam data
+        \item plausible redshift $z\sim 0.05$(1902.10120), should yield strong cross
           correlation with 2MRS, SDSS main sample.
-        \item can be done by anyone in the world that scans the
-          Amsterdam plot
-        \item out-of-beam events 190125B, 191210C are brightest FRBs
-          ever, thus possibily closest.  
+        \item in tension with unpublished ASKAP identifications
+        \item need to better understand CHIME DM selection
+        \item calibrate high SNR from baseband? 
      \end{itemize}
   }
 
