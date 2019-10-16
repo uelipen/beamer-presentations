@@ -96,15 +96,42 @@
       \item binary versions of EHT
     \end{itemize}
       \includegraphics[scale=0.32]{Figures/EHT.png}
-
   }
+
  \frame{
     \frametitle{Pulsar Timing Arrays}
     \begin{itemize}
       \item GWs change the ToA of pulsars
-      \item Densely sampled limit
-      \item ToA map: angle+time data cube
-      \item FFT into complex 2-D map at each frequency
+      \item Three analysis scenarios: 1-D vs 2-D vs 3-D array  (Boyle+UP 2012)
+      \item To-date, most analyses are 1-D (Helling-Downs 1983)
+      \item 2-D is sensitive to source position, polarization
+      \item 3-D analysis requires (precise) pulsar distances
+    \end{itemize}
+  }
+
+
+  \section{3-D imaging}
+  \subsection{GW interferometry}
+  \frame{
+    \frametitle{3-D}
+    \begin{itemize}
+      \item if distances to pulsars are known to better than a few
+        wavelengths ($\sim$pc), source positions are known to $\delta \theta \sim
+        \frac{\lambda}{D}$.
+      \item arc minute localization: much more precise than LIGO++
+      \item small added complexity if chirp changes over the 3-D
+        extent of PTA (kpc)
+    \end{itemize}
+  }
+
+  \frame{
+    \frametitle{Distance measurement}
+    \begin{itemize}
+    \item VLBI Scintillometry: demonstrated 50 pico arcsecond astrometry
+      (Pen++2014)
+    \item ongoing test in known systems
+    \item promising for binary systems
+    \item low frequency VLBI monitoring: LWA, LOFAR, GMRT, MWA, etc
     \end{itemize}
   }
 
@@ -112,7 +139,7 @@
     \frametitle{Redshift maps}
     \begin{itemize}
       \item overcoming 'confusion limit'
-      \item redshift maps: Boyle+UP 2012, Roebber+Holder 2017
+      \item redshift maps: Roebber+Holder 2017
       \item Densely sampled limit
       \item ToA map: angle+time data cube
       \item FFT into complex 2-D map at each frequency
@@ -241,44 +268,19 @@ over all pulsar distances.  Well known result.
 
 %  \subsection{Statistics}
 
-  \section{3-D imaging}
-  \subsection{GW interferometry}
-  \frame{
-    \frametitle{3-D}
-    \begin{itemize}
-      \item if distances to pulsars are known to better than 1
-        wavelength ($\sim$pc), source positions are known to $\delta \theta \sim
-        \frac{\lambda}{D}$.
-      \item arc minute localization: much more precise than LIGO++
-      \item complications when pulsar period changes over the 3-D
-        extent of PTA
-    \end{itemize}
-  }
-
-  \frame{
-    \frametitle{Distance measurement}
-    \begin{itemize}
-    \item VLBI Scintillometry: demonstrated 50 pico arcsecond astrometry
-      (Pen++2014)
-    \item ongoing test in known systems
-    \item promising for binary systems
-    \item low frequency VLBI monitoring: LWA, LOFAR, GMRT, MWA, etc
-    \end{itemize}
-  }
-
   \subsection{Conclusions}
   \frame{
     \frametitle{Conclusions}
     \begin{itemize}
+    \item Gravitional wave era has just begun
+    \item new probes into BH, dark matter
     \item PTA has potential to be high resolution GW telescope    
     \item 3-D: $\sim \frac{10'}{\rm SNR}$
     \item Changes physical interpretation of PTA GW signals: unlikely
-      to be in stochastic regime.  2-PCF confusion analysis is
-      self-fulfilling prophecy.
-    \item sellable feature: orders of magnitude more precise in angle than LIGO
+      to be in stochastic regime. 
     \item motivation for precision pulsar VLBI scintillometry
       distances
-    \item Scintillometry 2018: Oct 22-26 at TDLI in Shanghai!
+    \item potential use of FRB scintillometry for GW detection
     \end{itemize}
   }
 \end{document}
