@@ -1,0 +1,95 @@
+\documentclass{beamer}
+\usepackage{media9}
+%\usepackage{movie15}
+
+
+%\usepackage{graphicx}
+\usepackage{verbatim}
+
+\useoutertheme{shadow}
+%\usecolortheme{orchid}
+\usecolortheme{seahorse}
+
+\renewcommand{\a}{\alpha}
+\renewcommand{\b}{\beta}
+\renewcommand{\d}{\delta}
+\newcommand{\g}{\gamma}
+\newcommand{\s}{\sigma}
+\newcommand{\w}{\omega}
+\renewcommand{\k}{\vec{k}}
+\newcommand{\td}[1]{\tilde{#1}}
+\newcommand{\x}{\vec{x}}
+\newcommand{\p}{\phantom{\alpha}}
+
+\def\toonscale{0.45}
+\def\mboxy#1{\mbox{\small #1}}
+
+
+\begin{comment}
+\AtBeginSection[]{
+  \frame{
+    \frametitle{Outline}
+    \tableofcontents[currentsection]
+  }
+}
+\end{comment}
+
+\title{Future Telescopes, Future Theory}
+\subtitle{Scintillometry 2019}
+\author[Pen]{Ue-Li Pen \\[8mm] 
+}
+\date{MPIfR, November 7, 2019}
+
+
+\begin{document}
+
+\frame{\titlepage}
+
+%\section*{Introduction}
+\section{Introduction}
+
+\begin{comment}
+  \subsection{Outline}
+
+  \frame{
+    \frametitle{Outline}
+    \tableofcontents
+  }
+\end{comment}
+
+\subsection{Telescopes}
+  \frame{
+    \frametitle{Archival:}
+    \begin{itemize}
+      \item intensity: Parkes, LOFAR, CHIME, etc
+      \item create dynamic spectrum zoo?
+      \item baseband: LEAP, Radioastron
+    \end{itemize}
+  }
+
+  \frame{
+    \frametitle{Networks:}
+    \begin{itemize}
+      \item LEAP
+      \item southern hemisphere VLBI: MeerKAT+Parkes+GMRT?
+      \item RadioAstron ++?
+      \item Wider bandwidth?
+    \end{itemize}
+  }
+
+  \section{Theory}
+  \frame{
+    \frametitle{Theory}
+    \begin{itemize}
+      \item Phase retrieval problem: substantial progress
+      \item Wave optics: new tools (PL, etc)
+      \item lens reconstruction
+      \item two screen lensing:
+      \item  even for two 1-D lenses, becomes 2-D geometric optics
+        problem: in rest frame of lens, pulsar or earth can move
+      \item not described by a static scintillation pattern blowing
+        over earth
+    \end{itemize}
+  }
+
+\end{document}
