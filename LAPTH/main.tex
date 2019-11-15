@@ -66,13 +66,11 @@
     \frametitle{Radio Survey Science}
     \begin{itemize}
         \item FRB
-        \item 21cm+IM          
-        \item 21cm absorbers
+        \item 21cm: Intensity Mapping (Chang 2008++), absorbers
         \item polarization
         \item pulsar search
+        \item transients: TDE, etc
     \end{itemize}
-\vspace{-0.6in}\hspace{2.6in}
-\includegraphics[width=1.5in]{Figures/gbt-eric.png} \vspace{-0.5in}
   }
 
 
@@ -83,76 +81,65 @@
         \item wide FOV
         \item large collecting area
         \item scalable processing cost
-        \item FFTT!  ()
-        \item 
+        \item FFTT!  (Tegmark\&Zaldarriaga 2009++)
+        \item precision localization
     \end{itemize}
-\vspace{-0.6in}\hspace{2.6in}
-\includegraphics[width=1.5in]{Figures/gbt-eric.png} \vspace{-0.5in}
   }
 
-
-
-
-  \frame{
-\vspace{-0.2in}
-    \frametitle{map}
-\hspace{-0.2in}\includegraphics[width=4.5in]{Figures/sec_A_15hr_41-90_clean_map_I_RADec.mp4}
-  }
-  \frame{
-\vspace{-0.2in}
-    \frametitle{residual}
-\hspace{-0.2in}\includegraphics[width=4.5in]{Figures/gbt-residual.png}
-  }
-  \frame{
-    \frametitle{power}
-\vspace{-0.2in}
-\hspace{-0.3in}\includegraphics[width=4.5in]{Figures/gbt-power.png}
-  }
-  \frame{
-    \frametitle{Auto power constraints}
-%\vspace{-0.2in}
-\hspace{-0.1in}\includegraphics[width=3in]{Figures/gbt-omegahi.png}
-Switzer et al 2013
-  }
 
   \frame{
 \vspace{-0.5in}
-    \frametitle{Parkes-IM}
+    \frametitle{Metrics}
     \begin{itemize}
-      \item 500 beam-hours on 2dF field
-      \item measure 21cm $z<0.2$ auto-power, cross-power, RSD, $\Omega_{HI}$
-      \item Anderson et al 2018
-%          \vspace{-0.15in}
+        \item flux limited survey speed: A$\Omega$
+        \item time resolution: nano-sec (targeted), ms (survey)
+        \item spectral resolution R=$\lambda/\Delta \lambda$: CHIME
+          $\sim 10^{5-6}$
+        \item dynamic range: CHIME spectral target $10^4$.
+        \item trigger latency: CHIME $\sim 30$ sec
+        \item localization: current $'-^o$, with outriggers $\sim$ milli-arcsec
     \end{itemize}
-%\vspace{-0.1in}
-\hspace{.3in}
-\includegraphics[width=3in]{Figures/parkes.png}\vspace{-0.4in}
   }
+
+
   \frame{
-    \frametitle{HIPASS comparison}
+\vspace{-0.5in}
+    \frametitle{Algorithms}
+    \begin{itemize}
+        \item past telescopes: large dishes, modest number of
+          receivers (ALMA $N\sim 64$)
+        \item classic image forming cost $N^2$, reduce to $N\log N$
+          with FFT
+        \item dedispersion cost $O(n_{\rm chan}^2)$, reduce to $n \log
+          n$ with tree or FFT
+        \item (pulsar) periodicity search: $O([T/\tau]^2)$, again reduce to
+          $\log$
+        \item CHIME: $N=1024,\ n=16483,\ T/\tau\sim 10^8$
+        \item scalable!
+    \end{itemize}
+  }
+
+
+
+  \frame{
+    \frametitle{FRBs}
+    \begin{itemize}
+        \item CHIME discovered hundreds of FRBs
+        \item orders of magnitude faster discovery rate than past
+          surveys
+        \item coherent sources at cosmological distance: interference
+          patterns, GW, lensing, etc
+    \end{itemize}
 %\vspace{-0.2in}
-\hspace{0.1in}\includegraphics[width=3.5in]{Figures/parkes-ra199crop.png}
+\hspace{-0.1in}\includegraphics[width=1.6in]{Figures/chime-nature.png}
   }
-
-
-  \frame{
-    \frametitle{EoR}
-    \begin{itemize}
-        \item rollercoaster: best constraints get retracted
-        \item GMRT-EoR: Paciga et al 2011 -- 2013, longest standing
-          upper bound, NSERC SRO funded
-        \item PAPER: Parsons et al 2013 -- Cheng et al 2018
-        \item LOFAR: Patil et al 2017, update to 2019?
-        \item MWA: Beardsley et al 2016 --
-    \end{itemize}
-}
 
 \section{Ongoing Experiments}
   \frame{
     \frametitle{CHIME}
     \begin{itemize}
-        \item CHIME commissioning, first maps
-        \item foreground removal: multiple strategies
+        \item CHIME commissioning, first FRB's, first maps
+        \item daily sky cadence, exposure time 10m-24h per pointing
     \end{itemize}
 %\vspace{-0.1in}\hspace{.3in}
 \includegraphics[width=4in]{Figures/Chime-medium.jpg}
@@ -183,14 +170,29 @@ Switzer et al 2013
 %\vspace{-0.1in}\hspace{.3in}
 \includegraphics[width=4in]{Figures/hirax-karoo-s.jpg}
 }
-\section{Lessons learned}
+
   \frame{
-    \frametitle{Observing strategy}
+    \frametitle{Aperture Arraya}
     \begin{itemize}
-        \item drift scan: all approaches now utilize drift scans
-        \item $m$-mode transform: eliminate E-W mode mixing! (Shaw et
-          al 2014, 2015)
-        \item scale invariant N-S imaging: apodization to common beam
+        \item prototype: Nancay-EMBRACE
+        \item all-sky all-time: synergy with LIGO+, GRB, $\nu$, etc
+        \item ongoing discussion with MPIfR to deploy as all-sky monitor
+    \end{itemize}
+%\vspace{-0.1in}\hspace{.3in}
+\includegraphics[width=3in]{Figures/embrace-n.jpg}
+}
+
+
+
+  \frame{
+    \frametitle{Scalability}
+    \begin{itemize}
+        \item current CHIME cost: $\sim \$100$ for analog chain, plus $\sim
+          \$1000$/digital channel, $\$200$/m$^2$ collecting area
+        \item dominated by development, primary goal speed to deployment
+        \item asymptotic deployment cost likely factor of 10 lower
+        \item could envision million+ element array, arbirary angular
+          localization, many sq-km collecting area
     \end{itemize}
 }
 
@@ -198,10 +200,11 @@ Switzer et al 2013
   \frame{
     \frametitle{Outlook}
     \begin{itemize}
-        \item 21cm foreground challenge resulted in diverse approaches
-        \item biggest achieved removal in single dish GBT: compact
-          filled aperture
-        \item Canadian leaderhip: CHIME, HIRAX, GBT, GMRT-EoR
+        \item CHIME first production FFTT: revolution
+        \item all-sky monitors: FFTT for aperture arrays e.g. EMBRACE
+          in Nancay
+        \item New potential for wide radio surveys: 21cm BAO, FRB
+          cosmology
     \end{itemize}
 }
 
