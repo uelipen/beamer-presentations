@@ -1,0 +1,97 @@
+\documentclass[graphics]{beamer}
+
+\usepackage{graphicx}
+\usepackage{verbatim}
+\usepackage{wrapfig}
+\useoutertheme{shadow}
+%\usecolortheme{orchid}
+\usecolortheme{seahorse}
+
+
+% math commands
+\newcommand{\be}{\begin{eqnarray}}
+\newcommand{\ee}{\end{eqnarray}}
+\newcommand{\beq}{\begin{equation}}
+\newcommand{\eeq}{\end{equation}}
+\def\simless{\mathbin{\lower 3pt\hbox
+      {$\rlap{\raise 5pt\hbox{$\char'074$}}\mathchar"7218$}}}
+\def\simgreat{\mathbin{\lower 3pt\hbox
+      {$\rlap{\raise 5pt\hbox{$\char'076$}}\mathchar"7218$}}} %> or of order
+
+% variables
+
+\def\toonscale{0.45}
+\def\mboxy#1{\mbox{\small #1}}
+
+
+\begin{comment}
+\AtBeginSection[]{
+  \frame{
+    \frametitle{Outline}
+    \tableofcontents[currentsection]
+  }
+}
+\end{comment}
+
+\title{CHIME 21cm-absorber
+}
+%\subtitle{interim update}
+\author[U. Pen]{Ue-Li Pen, CITA
+\\[8mm] 
+}
+\date{December 16, 2019}
+
+
+\begin{document}
+
+%\section*{Introduction}
+\section{Current results}
+
+\begin{comment}
+  \subsection{Outline}
+
+  \frame{
+    \frametitle{Outline}
+    \tableofcontents
+  }
+\end{comment}
+
+\frame{\maketitle}
+
+  \frame{
+    \frametitle{CHIME-absorber}
+    \begin{itemize}
+        \item CHIME surveys $0.8<z<2.4$
+        \item forecast up to $10^5$ new blind detection systems, orders of
+          magnitude improvement over existing surveys, different
+          hemisphere/redshift range from ASKAP-FLASH (Yu++ 2014) 
+        \item map galaxy evolution
+        \item potentially measure cosmic acceleration through
+          Sandage-Loeb effect
+    \end{itemize}
+}
+
+  \frame{
+\vspace{-0.5in}
+    \frametitle{Technical Steps}
+    \begin{itemize}
+    \item absorption depth $\proto 1/T$, sensitive to cold gas
+        \item narrow features, often finer than km/s
+        \item requires $R\sim 10^5$
+        \item rechannelize CHIME-FRB beam stream to 3kHz
+        \item use earth-sun doppler motion to reject foregrounds, RFI
+    \end{itemize}
+  }
+
+
+  \frame{
+    \frametitle{Progress}
+    \begin{itemize}
+        \item James Willis implemented first version of fine
+          chanelization pipeline
+        \item Initial test data          
+       \item Future: may benefit from precise VLBI localization with CHIME-outriggers
+    \end{itemize}
+}
+
+\end{document}
