@@ -67,8 +67,7 @@
         \item $Delta T \ll 2.78$K:  $3n_1/n_0=\exp(\delta E/kT)\sim
           1+0.068/T$
           \item optical depth $\tau \propto 1/T$
-        \item emission $\propto $T \tau$ is independent of T, absorption $\propto 1/T$
-        \item optical depth $\tau 
+        \item emission $\propto $T, $\tau$ is independent of T, absorption $\propto 1/T$
         \item colded atoms in LoS dominate
         \item typically dominated by cold atomic clouds
     \end{itemize}
@@ -82,6 +81,8 @@
     \item first detected in 3C278 at GBO in 1950
         \item current best constraint on direct measurement of cosmic
           acceleration (Darling 2012)
+\item $z= 0.692153275(85)$, is $ż = (1.6 \pm 4.7) × 10^{−8}$/yr,
+  expected $\dot{z}=2\times 10^{-11}$/yr.
         \item concept: watch the doppler shift of objects change with
           time:
           \item acceleration: doppler shift increases with time
@@ -96,6 +97,8 @@
 \vspace{-0.5in}
     \frametitle{Strategy}
     \begin{itemize}
+    \item implemented high frequency resolution CHIME all sky survey
+      (James, Arash, CIRADA, etc): 3 kHz
         \item need exquisite system stability
         \item how can we know our bandpass to $10^{-5}\sim
           1/\sqrt{\delta \nu t}$?
@@ -111,126 +114,48 @@
 
   \frame{
 \vspace{-0.5in}
-    \frametitle{Metrics}
+    \frametitle{Future potential}
     \begin{itemize}
-        \item flux limited survey speed: A$\Omega$
-        \item time resolution: nano-sec (targeted), ms (survey)
-        \item spectral resolution R=$\lambda/\Delta \lambda$: CHIME
-          $\sim 10^{5-6}$
-        \item dynamic range: CHIME spectral target $10^4$.
-        \item trigger latency: CHIME $\sim 30$ sec
-        \item localization: current $'-^o$, with outriggers $\sim$ milli-arcsec
+    \item large number of 21cm absorbers
+    \item measure gas temperature by comparison with L$_\alpha$
+    \item test fine structure evolution
+    \item nature of DLAs
+    \item obscuration bias
+    \item associated absorption: AGN accretion disk
+    \item majority of radio loud QSOs have no optical redshift
+    \item majority of DLAs cannot be imaged in the optical due to QSO
+      blinding
+    \item first large sample of unblinded DLA
+    \item potentially discover OH maser emission/absorption: rest
+      frame 1.612, 1.665, 1.667, 1.720 GHz lines
     \end{itemize}
   }
-
 
   \frame{
 \vspace{-0.5in}
-    \frametitle{Algorithms}
+    \frametitle{Localization}
     \begin{itemize}
-        \item past telescopes: large dishes, modest number of
-          receivers (ALMA $N\sim 64$)
-        \item classic image forming cost $N^2$, reduce to $N\log N$
-          with FFT
-        \item dedispersion cost $O(n_{\rm chan}^2)$, reduce to $n \log
-          n$ with tree or FFT
-        \item (pulsar) periodicity search: $O([T/\tau]^2)$, again reduce to
-          $\log$
-        \item CHIME: $N=1024,\ n=16483,\ T/\tau\sim 10^8$
-        \item scalable!
+    \item CHIME resolution will limit absorber positions to several arcminutes
+    \item potentially confusion limited identification of background source
+    \item could localize with CHIME outriggers
+    \item
     \end{itemize}
   }
 
-
-
-\section{Ongoing Experiments}
   \frame{
-    \frametitle{CHIME}
+\vspace{-0.5in}
+    \frametitle{Conclusions}
     \begin{itemize}
-        \item CHIME commissioning, first FRB's, first maps
-        \item daily sky cadence, exposure time 10m-24h per pointing
+    \item CHIME is by far world's fastest radio survey telescope
+    \item absorbers are 
+    \item 
+    \item 
+    \item 
+    \item 
+    \item 
+    \item
+    \item
     \end{itemize}
-%\vspace{-0.1in}\hspace{.3in}
-\includegraphics[width=4in]{Figures/Chime-medium.jpg}
-}
-
-  \frame{
-\vspace{-0.2in}
-    \frametitle{MAP}
-\hspace{-0.2in}\includegraphics[width=4.5in]{Figures/CHIME-map.png}
   }
-
-  \frame{
-    \frametitle{Tianlai}
-    \begin{itemize}
-        \item in Xinjiang, China
-        \item currently commissioning
-    \end{itemize}
-%\vspace{-0.1in}\hspace{.3in}
-\includegraphics[width=4in]{Figures/tianlai-medium.jpg}
-}
-
-  \frame{
-    \frametitle{HIRAX}
-    \begin{itemize}
-        \item Karoo, SA
-        \item most ambitious IM-BAO project, doubles as pulsar and FRB engine
-    \end{itemize}
-%\vspace{-0.1in}\hspace{.3in}
-\includegraphics[width=4in]{Figures/hirax-karoo-s.jpg}
-}
-
-  \frame{
-    \frametitle{Aperture Arrays}
-    \begin{itemize}
-        \item prototype: Nancay-EMBRACE
-        \item all-sky all-time: synergy with LIGO+, GRB, $\nu$, etc
-        \item ongoing discussion with MPIfR to deploy as all-sky monitor
-    \end{itemize}
-%\vspace{-0.1in}\hspace{.3in}
-\includegraphics[width=3in]{Figures/embrace-n.jpg}
-}
-
-  \frame{
-    \frametitle{LIGO-DM?}
-    \begin{itemize}
-      \item 30 $M_\odot$ window potentially allowed
-      \item detectable by FRB microlensing
-      \item coherent microlensing gives exact mass
-    \end{itemize}
-%\vspace{-0.1in}\hspace{.3in}
-\includegraphics[width=4.5in]{Figures/LIGO-macho.png}
-}
-
-
-
-  \frame{
-    \frametitle{Scalability}
-    \begin{itemize}
-        \item current CHIME cost: \$10m: $\sim \$100$ for analog chain, plus $\sim
-          \$1000$/digital channel, $\$200$/m$^2$ collecting area
-        \item dominated by development, primary goal speed to deployment
-        \item asymptotic deployment cost likely factor of 10 lower
-        \item could envision million+ element array, arbirary angular
-          localization, many sq-km collecting area
-        \item applications: FRB (micro-)lensing, GC binary inventory
-          (Fermi-LAT connection), etc
-        \item expand current sample from $\sim 10^3$ to $>10^6$
-    \end{itemize}
-}
-
-
-  \frame{
-    \frametitle{Outlook}
-    \begin{itemize}
-        \item CHIME first production FFTT: revolution
-        \item outrigger localization in progress
-        \item all-sky monitors: FFTT for aperture arrays e.g. EMBRACE
-          in Nancay
-        \item New potential for wide radio surveys: 21cm BAO, FRB
-          cosmology
-        \item FRB new potential: wave coherent source, lensing, DM, GW
-    \end{itemize}
-}
 
 \end{document}
