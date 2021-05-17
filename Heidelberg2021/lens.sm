@@ -1,0 +1,39 @@
+dev x11
+#dev postencap theta-beta.eps
+erase
+ctype default
+ltype 0
+expand 1.5
+lweight 2
+set x=-5,5,0.01
+set phi=2/(1+x**2)
+set dphi=-2*x*phi**2
+set y=x+dphi
+limits y x
+connect y x
+box
+xlabel \beta
+ylabel \theta
+toplabel rational lens
+relocate -4 -6
+ctype blue
+draw -4 6
+relocate -3.95 4
+putlabel 6 1+i
+relocate -1 -6
+ctype green
+draw -1 6
+relocate -.95 3
+putlabel 6 3
+relocate 2.05 -6
+ctype red
+draw 2.05 6
+relocate 2.1 -4
+putlabel 6 A_2
+set xx=-2.15,-5,-0.1
+data xtab.dat
+read { yy 1 }
+set ym=-yy
+ctype default
+ltype 2
+connect xx ym
