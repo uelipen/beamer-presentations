@@ -33,7 +33,7 @@
 }
 \end{comment}
 
-\title{Wave Optice lensing
+\title{Wave Optics lensing
 }
 %\subtitle{interim update}
 \author[U. Pen]{Ue-Li Pen
@@ -67,9 +67,7 @@
         \item Plasma lensing
         \item Coherent sources: forms interference pattern
         \item expected (observed) for FRBs
-        \item 
-        \item 
-        \item 
+
     \end{itemize}
   }
 
@@ -78,13 +76,12 @@
 \vspace{-0.5in}
     \frametitle{History}
     \begin{itemize}
-    \item Huygens, Fermat, 
-    \item Picard-Lefschitz (19th century), Witten (2010)          
-        \item concept: Oscillatory path integral
-        \item 
-        \item imaginary images
-        \item 
-            
+    \item Huygens, Fermat, Feynmann
+    \item Picard-Lefschetz (19th century), Witten (2010)          
+    \item concept: Oscillatory Kirchoff path integral
+    \item sum over all possible paths, weighted by phase
+    \item new phenomena: imaginary images, diffraction
+    \item Numerical challenges (e.g. Grillo and Cordes 2018)            
     \end{itemize}
   }
 
@@ -107,10 +104,12 @@
     \frametitle{Huygen's Principle: Path Integral}
     \begin{itemize}
         \item $A=\int e^{i S(\theta,\mu)} d\theta$ 
-        \item $S=\nu (\theta^2+\Psi)$
+        \item $S=\nu ((\theta-\mu)^2+\Psi(\theta))$
         \item Highly oscillatory integral, even for $\Psi=0$
         \item Stationary phase points: $\partial_\theta S=0$ leads to
           Eikonal images $\theta_i$.
+        \item flux/phase through curvature expansion (known as {\it
+            steepest descent})
         \item Geometric limit considers only {\it Real} $\theta_i$ and
           absolute value of the action $S$, giving up phase
           information
