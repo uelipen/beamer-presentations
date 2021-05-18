@@ -37,7 +37,7 @@
 }
 %\subtitle{interim update}
 \author[U. Pen]{Ue-Li Pen
-\\ Dylan Jow, Job Feldbrugge, Neil Turok 
+\\ Dylan Jow, Job Feldbrugge, Neil Turok, Emily Tyhurst, Fangxi Lin 
 }
 \date{May 18, 2021}
 
@@ -66,7 +66,7 @@
         \item Gravitational Lensing: micro, macro
         \item Plasma lensing
         \item Coherent sources: forms interference pattern
-        \item expected (observed) for FRBs
+        \item expected (observed) for FRBs, GWs
 
     \end{itemize}
   }
@@ -87,20 +87,21 @@
 
 
   \frame{
-\vspace{-0.5in}
+\vspace{-0.25in}
     \frametitle{Optics: Geometric, Eikonal, Wave, P-L}
     \begin{itemize}
         \item Consider 1-D lens
-        \item potential lensing function $\Psi(\theta)$
+        \item lensing potential $\Psi(\theta)$
         \item deflection $\Psi'$
+        \item simplify for $D_{\rm ds}=\infty$
     \end{itemize}
-\vspace{-1in}\hspace{2.5in}\includegraphics[width=1.5in]{Figures/lens.png}
+\vspace{-0.5in}\hspace{2.5in}\includegraphics[width=1.5in]{Figures/lens.png}
 
   }
 
 
   \frame{
-\vspace{-0.5in}
+\vspace{-0.25in}
     \frametitle{Huygen's Principle: Path Integral}
     \begin{itemize}
         \item $A=\int e^{i S(\theta,\mu)} d\theta$ 
@@ -116,7 +117,7 @@
         \item Geometric optics applicable at short wavelengths for
           extended sources
           (e.g. optical gravitational lensing of finite size sources,
-          e.g. stars)          
+          stars)          
     \end{itemize}
   }
 
@@ -124,8 +125,8 @@
 \vspace{-0.5in}
     \frametitle{Imaginary Images}
     \begin{itemize}
-    \item consider ``rational lens'' potential $\psi(\theta)=\alpha/(1+x^2)$
-    \item Geometric/eikonal images at $\psi'=x$
+    \item consider ``rational lens'' potential $\psi(\theta)=\alpha/(1+\theta^2)$
+    \item Geometric/eikonal images at $\psi'=\theta$
     \item 5 roots.  1 or 3 real roots, rest imaginary
     \item P-L: at most one imaginary image contributes!
     \item imaginary image can be brighter than unlensed real image
@@ -145,7 +146,7 @@
 \vspace{-0.5in}
     \frametitle{Picard-Lefschetz Theory}
     \begin{itemize}
-    \item descend integral along real line along Morsefunction Im(S)
+    \item descend integral along real line along Morse function Im(S)
     \item contour deforms into finite number of Thimbles of constant
       phase with maximum at saddle point (extrema $dS=0$)
     \item correctly identifies relevant saddle points
@@ -199,11 +200,7 @@ Feldbrugge+2019
     \frametitle{Stokes Phenomenon}
     \begin{itemize}
     \item Imaginary images (dis-)appear at caustics and Stokes lines
-    \item Caustic: 
-    \item 
-    \item 
-    \item 
-    \item 
+    \item in single image regime, imaginary image disappears on-axis
     \end{itemize}
   }
 
@@ -269,7 +266,7 @@ effect dominates for long wavelengths as Fresnel scale is bigger then Einstein r
 \vspace{-0.5in}
     \frametitle{Conclusions}
     \begin{itemize}
-    \item wave optics changes nature of observables: potentially most
+    \item wave optics changes nature of observables: one of the potentially most
       precise measurements in physics
     \item coherent radio waves (FRBs, pulsars): described by Eikonal
       away from caustics/catastrophies

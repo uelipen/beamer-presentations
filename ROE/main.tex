@@ -36,7 +36,7 @@
 \title{Cosmic fossils: Galaxy Directional Spin
 }
 \subtitle{}
-\author[U. Pen]{\textcolor{green}{Ue-Li Pen}\\
+\author[U. Pen]{\large\textcolor{green}{Ue-Li Pen}\\
 \small \textcolor{blue}{HaoranYu, Pavel Motloch}
 \\[8mm] 
 }
@@ -55,7 +55,7 @@
 }
 
 %\section*{Introduction}
-\section{Tale of two Tensors}
+\section{Spin}
 
 \begin{comment}
   \subsection{Outline}
@@ -70,8 +70,8 @@
   \frame{
     \frametitle{Introduction}
     \begin{itemize}
-    \item Galaxy spins are fossils of small scale IC
-    \item described by Tidal Torque Theory (White 1984++): torquing of
+    \item Galaxy spins are fossils of small scale (\~{}Mpc) IC
+    \item described by Tidal Torque Theory (TTT, White 1984++): torquing of
       inertia tensor by tidal tensor
     \item until recently, inertia tensor considered unknowable \& spin
       direction unobservable
@@ -81,7 +81,6 @@
      \item Simulations: angular momentum directions of TTT, DM,
       Baryons very well aligned, readily observables.  Magnitudes poorly predicted, and
           not observable.
-        \item previous studies mostly focussed on weak, residual alignments
         \item New: measuring and predicting {\it oriented} spin
         \end{itemize}
 }
@@ -91,17 +90,9 @@
 \vspace{-0.1in}
 \includegraphics[width=4.5in]{Figures/torque.png}
 
-Motloch et al 2020
+Motloch+ 2003.04800
   }
 
-
-\frame{
-    \frametitle{Simulation Lagrangian Correlation}
-\vspace{-0.1in}
-\includegraphics[width=4.0in]{Figures/Illustris_Lagrangian_AM_cosangle_distributions_allgas.pdf}  
-
-Noise smaller than Poisson! (Illustris, from Shy Genel)
-  }
 
 
 \frame{
@@ -128,7 +119,7 @@ Noise smaller than Poisson! (Illustris, from Shy Genel)
   \frame{
     \frametitle{Galaxy Spins}
     \begin{itemize}
-        \item most galaxies are rotating disks of stars and gas
+        \item many/most galaxies are rotating disks of stars and gas
         \item readily identifyable spin axis
         \item dust lanes, trailing spiral arms, (HI) velocity
           (rotation) field
@@ -161,24 +152,24 @@ Noise smaller than Poisson! (Illustris, from Shy Genel)
   \frame{
     \frametitle{Context}
     \begin{itemize}
-        \item S White 1984: TTT
+        \item SDM White 1984: TTT
         \item Genel++: spin magnitude
         \item Lee\&Pen 2000: LSS statistical theory
-        \item Yu++ 2018: Lagrangian theory, high fidelity direction
+        \item Yu++ 2018: Lagrangian sim+theory, high fidelity direction
           memory, poor magnitude memory
      \end{itemize}
 }
 
-
+\section{Torque}
   \frame{
     \frametitle{Angular momentum}
     \begin{itemize}
         \item 1st order effect from misalignment of moment of inertia
           and tidal tensor
-        \item torque: $\tau\equiv\int \rho \bf{r} \times \nabla \phi$
-        \item Taylor expand: $\tau_i=\epsilon_{ijk} \int \rho x^jx^l \partial_l\partial_k\phi \equiv\epsilon_{ijk} I_{il}T_{lk}$
+        \item torque: $\tau\equiv\int_V \rho \bf{r} \times \nabla \phi$
+        \item Taylor expand: $\tau_i=\epsilon_{ijk} \int \rho x^jx^l \partial_l\partial_k\phi \equiv\epsilon_{ijk} I_{jl}T_{lk}$
         \item Tensor form $\tau= * I \cdot T$
-        \item first realized by S.D.M. White (1984), see also LP00
+        \item first described by S.D.M. White (1984), see also LP00
      \end{itemize}
 }
 
@@ -206,16 +197,21 @@ originally Neyrinck+ 2012)
 Yu+2018
   }
 
+
 \frame{
-    \frametitle{Lagrangian coordinates}
-\center{\includegraphics[width=4.3in]{Figures/delta_reco_raw.pdf}  }
+    \frametitle{Simulation Lagrangian Correlation}
+\vspace{-0.1in}
+\includegraphics[width=4.0in]{Figures/Illustris_Lagrangian_AM_cosangle_distributions_allgas.pdf}  
+
+Noise smaller than Poisson! (Illustris, from Shy Genel)
   }
+
 \frame{
 \vspace{-0.5in}
     \frametitle{Reconstruction}
     \begin{itemize}
         \item multiple successful approaches
-        \item injective Isobaric (Pen++ 1995, Zhu/Wang/Yu/ 2016-2020 )
+        \item bijective Isobaric (Pen++ 1995, Zhu/Wang/Yu/ 2016-2020 )
         \item ELUCID, Schmidtful17,  Shi18, Hada18, Hikage19, etc
         \item typically achieve 50\% phase fidelity per mode up to
           $k\sim 1h$/Mpc.
@@ -227,14 +223,12 @@ Yu+2018
     \begin{itemize}
         \item {\bf I} readily measured in simulations
         \item highly correlated with tide {\bf T}
-        \item depends on small misalignment with {\it external} shear
-        \item use small scale tide as proxy for inertia, and larger
-          scale for tide
-        \item in progress: Lagrangian space tesselation?
+        \item torque due to twisting of  {\bf T} with scale
+        \item Taylor expansion: ${\bf I}_{ij}=\partial_i\partial_j \rho$
      \end{itemize}
   }
 
-
+\section{Data}
 \frame{
     \frametitle{Result}
 \center{\includegraphics[width=3in]{Figures/zooJ.png}  }
