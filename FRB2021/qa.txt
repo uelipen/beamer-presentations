@@ -1,0 +1,19 @@
+Mohit Bhardwaj       8:09 PM
+Ue-Li -- Is there any smoking-gun evidence of plasma lensing in the case of FRBs?
+
+This question has been answered live
+
+Zorawar Wadiasingh       8:16 PM
+Are FRBs really going to be competitive for cosmological parameters and lensing studies compared to Einstein Telescope/Cosmic Explorer/LISA? Those BH mergers are also coherent, with more information in the waveform.
+
+This question has been answered live
+
+Ron Ekers       8:18 PM
+Great stuff Ue-Li but we still need to discuss the degree to which scattering will destroy some (but not all) of the coherence effects.
+
+This question has been answered live
+
+Adam Deller       8:19 PM
+There has been talk previously about how differential scattering along different sight lines for gravitationally lensed FRBs. Can you comment on whether you think that will destroy the coherence?
+
+This question has been answered live
