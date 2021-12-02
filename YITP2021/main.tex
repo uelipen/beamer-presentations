@@ -6,7 +6,9 @@
 \useoutertheme{shadow}
 %\usecolortheme{orchid}
 \usecolortheme{seahorse}
-
+\usepackage{tikzsymbols}
+\usepackage{textcomp}
+\usepackage{parskip}
 
 % math commands
 \newcommand{\be}{\begin{eqnarray}}
@@ -65,19 +67,13 @@
   }
 \end{comment}
 
- 
-  \frame{
-    \frametitle{Movie}
-    {\tt http://cita.utoronto.ca/\~\,haoran/thnu/movie.html}
-\includegraphics[width=4.2in]{Figures/thnucdmlowres.jpg}
-}
-  \frame{
+   \frame{
     \frametitle{Galaxy Spins}
     \begin{itemize}
         \item most galaxies are rotating disks of stars and gas
         \item dust lanes, trailing spiral arms, HI velocity (rotation) field
         \item readily identifyable spin axis in 3-D (see Motloch talk)
-        \item spin direction well preserved from initial conditions (Haoran's talk)
+        \item spin direction well preserved from initial conditions (Haoran's talk), $\sim$ 0.5 correlation with primordial IC.  Much stronger than shear alignment.
         \item potentially vast reservoir of fossils from initial conditions ($\gtrsim 10^8$ modes)
         \item direct probe of primordial helicity, cosmic neutrino background
      \end{itemize}
@@ -110,7 +106,7 @@
     \item approximate Inertia by Tide (Zeldovich), torqued by external tide.
     \item IC-TTT: $j_\alpha=\epsilon_{\alpha\beta\gamma} {\cal T}_{\beta \kappa} {\cal T}^+_{\kappa\gamma}$
     \item ${\cal T}=\bar{\phi}_{,\beta\kappa}$ smoothed tidal field
-    \item ${\cal T}^+_{\beta,kappa}=\bar{\phi}^+_{,\beta\kappa}$ tidal field smoothed on slightly larger scale, Taylor approximated by ${\cal T}^+_{\beta,kappa}=\bar{\rho}_{\beta\kappa}$
+    \item ${\cal T}^+_{\beta\kappa}=\bar{\phi}^+_{,\beta\kappa}$ tidal field smoothed on slightly larger scale, Taylor approximated by ${\cal T}^+_{\beta,kappa}=\bar{\rho}_{,\beta\kappa}$
     \item $\sim$ 0.5 correlation with actual eulerian spin at optimal mass filter
     \item ``best one can hope for'' in data reconstruction
 %          \vspace{-0.15in}
@@ -118,6 +114,24 @@
     }
       
 
+
+\frame{
+    \frametitle{Measurement}
+%\vspace{-0.5in}
+\hspace{-0in}\includegraphics[width=2.9in]{Figures/spincorr.pdf}  
+Motloch+ 2021
+  }
+
+ 
+\frame{
+    \frametitle{3-D: E-mode Lagrangian}
+%\vspace{-0.5in}
+\hspace{-0.2in}\includegraphics[width=2.1in]{Figures/nonlinear.png}  
+\vspace{0.15in}\includegraphics[width=2.1in]{Figures/reconstructed.png}  
+
+Eulerian (L) vs Lagrangian (R) (from Yu et al 2016, 1610.7112)
+  }
+ 
   \frame{
     \frametitle{E-mode Coordinate}
       reduce 3-D Lagrangian map to 1-D potential ({\it max Zeldovich}):
@@ -136,51 +150,24 @@ unique bijective mass coordinate.  See also Tully/Peebles, Mohayaee+, Goldberg, 
 Zaldarriaga, Hada/Eisenstein, Shi/Brikin/Li+, Jasche+, Sarpa+
 }
 
-\frame{
-    \frametitle{3-D: E-mode Lagrangian}
-%\vspace{-0.5in}
-\hspace{-0.2in}\includegraphics[width=2.1in]{Figures/nonlinear.png}  
-\vspace{0.15in}\includegraphics[width=2.1in]{Figures/reconstructed.png}  
-
-Eulerian (L) vs Lagrangian (R) (from Yu et al 2016, 1610.7112)
-  }
-
-\frame{
-    \frametitle{Lagrangian coordinates}
-\center{\includegraphics[width=4.3in]{Figures/delta_reco_raw.pdf}  }
-  }
-
-  \frame{
-    \frametitle{Multigrid solution}
-\vspace{-0.7in}\center{\includegraphics[width=4.0in]{Figures/map0512-0128_i1500_xz222.pdf}}
-Zhu et al 1610.09638
-}
-  \frame{
-    \frametitle{Redshift space}
-Zhu et al 1610.09638
-\vspace{-0.7in}\center{\includegraphics[width=4.0in]{Figures/map0512-0128_i0900_xz222_rsd3.pdf}}
-}
-
-  \frame{
-    \frametitle{Low noise limit}
-\includegraphics[width=3.4in]{Figures/rk.pdf}
-}
-  \frame{
-    \frametitle{Halos}
-\vspace{-0.5in}\hspace{-0.9in}\includegraphics[width=5.0in]{Figures/halocc.pdf}
-}
-
  \frame{
     \frametitle{Predicting Neutrino Torques}
     \begin{itemize}
       \item $\nu$ gravitational field (large scale tide) torques CDM (small scale inertia)
       \item $\Delta x (q) = q^j \partial_i\partial_j \psi$
         \item $I_c \sim T_c$: both describe particle displacement
-        \item $j_\nu = \epsilon T_c T_\nu$
+        \item $j_\nu = \epsilon I_c T_\nu \sim  \epsilon T_c T_\nu$
         \item Neutrino tidal torque is predictable observable from
           displacement potential
      \end{itemize}
-  }
+ }
+ 
+  \frame{
+    \frametitle{Movie}
+    {\tt http://cita.utoronto.ca/\~\,haoran/thnu/movie.html}
+\includegraphics[width=4.2in]{Figures/thnucdmlowres.jpg}
+}
+
   \frame{
     \frametitle{Illustration}
 \vspace{-0.5in}\hspace{-0.6in}\includegraphics[width=5.0in]{Figures/f1.pdf}
@@ -197,26 +184,70 @@ Zhu et al 1610.09638
   }
 
 
-  \frame{
-\vspace{-0.5in}
-    \frametitle{Future 21cm Surveys}
-    \begin{itemize}
-        \item expand on HSHS (Peterson et al 2006), CHIME
-        \item build on economy of scale, map $10^{11}$ galaxies
-     \end{itemize}
-  }
   
 \frame{
 \vspace{-0.5in}
-    \frametitle{More cosmological applications}
+    \frametitle{Helicity}
     \begin{itemize}
-        \item map initial (linear) tidal field
-        \item BAO, standard ruler (Alcock-Paczynski effect)
-        \item modified gravity, time evolving neutrino mass
+    \item statistical isotropy and homogeneity allows for helicity asymmetry (e.g. weak force)
+        \item NOT Goedel/Longo effect (``net $k$ independent left/right spin'')
+        \item angular momentum measures twist of tidal tensor
+        \item helicity measures twist projected along $k$ vector 
+     \end{itemize}
+  }
+
+  \frame{
+    \frametitle{Nature}
+\vspace{-0.3in}\center{\includegraphics[width=4.0in]{Figures/twist.pdf}}
+V Schaller \& A. Bausch, Nature, 481, 268
+}
+  \frame{
+    \frametitle{Pastarimeter}
+    %\vspace{-0.3in}
+    \center{\includegraphics[width=2.5in]{Figures/pastarimeter.pdf}}
+{\tiny Saxon et al 2002, J. Chem. Ed, 79, 1214}
+}
+
+
+ \frame{
+    \frametitle{ELUCID projection}
+    \begin{itemize}
+    \item $J^\mathrm{IC}_a=  \epsilon_{abc}
+\partial_{bk} \phi^r
+\partial_{kc} \rho^r$
+    \item  $\mathbb{P}^{L/R}_{ab}(\mathbf{k}) = 
+  \frac{1}{2}
+  \left[
+  \(\delta_{ab} - \hat k_a \hat k_b\) 
+  \pm    i \epsilon_{abc} \hat k_c \right] $
+    \item   $\tilde J^\mathrm{IC}_{L/R,a}(\mathbf{k}) \equiv
+  \mathbb{P}^{L/R}_{ab}(\mathbf{k}) 
+  \tilde J^\mathrm{IC}_b(\mathbf{k})$
+    \item  $\mu_X = \left\langle 
+  \frac{\bs{J}^g}{|\bs{J}^g|}
+  \cdot
+  \frac{\bs{J}^\mathrm{IC}_X}{|\bs{J}^\mathrm{IC}_X|}
+  \right\rangle \ \ \ \ \ X \in \{L, R\}$
+\item $\mu_- = \mu_L - \mu_R$
      \end{itemize}
   }
 
 
+  
+\frame{
+\vspace{-0.5in}
+    \frametitle{Helicity results}
+    \begin{itemize}
+    \item   $\mu_L &=& \(0.41 \pm 0.53\) \times 10^{-2}$
+    \item maximal left is allowed
+      \item $\mu_R &=& \(1.99 \pm 0.53\) \times 10^{-2} $
+      \item maximal right is disfavoured!
+      \item $\mu_- = \(-1.58 \pm 0.75\) \times 10^{-2}$
+      \item Parity symmetry is allowed \dSmiley % \DejaSans{ ☺}
+     \end{itemize}
+  }
+
+  
 \frame{
 \vspace{-0.5in}
     \frametitle{Conclusions}
@@ -228,8 +259,7 @@ Zhu et al 1610.09638
             similar to Lagrangian
           \item already observable, scalable to much larger surveys
           \item parity odd field, less likely to be contaminated
-          \item enables measurement of 2 cosmic scalar fields:
-            potential beat cosmic variance limits, etc
+          \item unique probes of neutrinos, helicities, etc...
      \end{itemize}
   }
 
