@@ -33,10 +33,10 @@
 }
 \end{comment}
 
-\title{Neutrino Torques
+\title{Spin: Initial conditions
 }
 \subtitle{}
-\author[U. Pen]{\textcolor{green}{Ue-Li Pen, Haoran Yu, Xin Wang}
+\author[U. Pen]{\textcolor{green}{Ue-Li Pen, ASIAA, CITA}
 \\[8mm] 
 }
 \date{December 2, 2021}
@@ -65,31 +65,7 @@
   }
 \end{comment}
 
-  \frame{
-\vspace{-0.5in}
-    \frametitle{Origin of Angular Momentum}
-    \begin{itemize}
-    \item Tidal Torque Theory (TTT): relates spin to initial Inertia and Tide
-    \item Inertia tensor not easily identified, requires running N-body simulation.
-    \item approximate Inertia by Tide (Zeldovich), torqued by external tide.
-    \item Tidal Torque Theory: $j_\alpha=\epsilon_{\alpha\beta\gamma} {\cal T}_{\beta \kappa} {\cal T}^+_{\kappa\gamma}$
-    \item ${\cal T}=\bar{\phi},{\beta,kappa}$ smoothed tidal field
-    \item ${\cal T}^+_\beta,kappa}=\bar{\phi}^+,{\beta,kappa}$ tidal field smoothed on slightly larger scale, Taylor approximated by ${\cal T}^+_{\beta,kappa}=\bar{\rho},{\beta,kappa}$
-    \item 
-%          \vspace{-0.15in}
-    \end{itemize}
-  }
-  \frame{
-    \frametitle{Observables}
-    \begin{itemize}
-        \item CMB, gravitational lensing: 2-D projection, 
-        \item galaxies: 3-D biased displacement field
-        \item Monge-Amp\'ere equation/solution
-        \item ideally measure 2 fields, infer 2 fields: CDM, neutrinos (HDM)
-    \end{itemize}
-\vspace{-0.1in}\hspace{.3in}
-\includegraphics[width=2.2in]{Figures/th2photo.jpg}
-}
+ 
   \frame{
     \frametitle{Movie}
     {\tt http://cita.utoronto.ca/\~\,haoran/thnu/movie.html}
@@ -99,8 +75,11 @@
     \frametitle{Galaxy Spins}
     \begin{itemize}
         \item most galaxies are rotating disks of stars and gas
-        \item readily identifyable spin axis
         \item dust lanes, trailing spiral arms, HI velocity (rotation) field
+        \item readily identifyable spin axis in 3-D (see Motloch talk)
+        \item spin direction well preserved from initial conditions (Haoran's talk)
+        \item potentially vast reservoir of fossils from initial conditions ($\gtrsim 10^8$ modes)
+        \item direct probe of primordial helicity, cosmic neutrino background
      \end{itemize}
 }
 \frame{
@@ -111,7 +90,7 @@
   }
 
   \frame{
-    \frametitle{Angular momentum}
+    \frametitle{Angular momentum (``spin'')}
     \begin{itemize}
         \item 1st order effect from misalignment of moment of inertia
           and tidal tensor
@@ -122,24 +101,27 @@
      \end{itemize}
 }
 
-
-\frame{
-    \frametitle{3-D: E-mode}
+  \frame{
 %\vspace{-0.5in}
-\hspace{-0.2in}\includegraphics[width=2.3in]{Figures/nonlinear.png}  
-\vspace{0.15in}\includegraphics[width=2.21in]{Figures/reconstructed.png}  
-
-Eulerian (L) vs Lagrangian (R) (from Yu et al 2016, 1610.7112)
-  }
-
-\frame{
-    \frametitle{Lagrangian coordinates}
-\center{\includegraphics[width=4.3in]{Figures/delta_reco_raw.pdf}  }
-  }
+    \frametitle{predicting spin}
+    \begin{itemize}
+    \item Tidal Torque Theory (TTT): relates spin to initial Inertia and Tide
+    \item Inertia tensor not easily identified, requires running N-body simulation.
+    \item approximate Inertia by Tide (Zeldovich), torqued by external tide.
+    \item IC-TTT: $j_\alpha=\epsilon_{\alpha\beta\gamma} {\cal T}_{\beta \kappa} {\cal T}^+_{\kappa\gamma}$
+    \item ${\cal T}=\bar{\phi}_{,\beta\kappa}$ smoothed tidal field
+    \item ${\cal T}^+_{\beta,kappa}=\bar{\phi}^+_{,\beta\kappa}$ tidal field smoothed on slightly larger scale, Taylor approximated by ${\cal T}^+_{\beta,kappa}=\bar{\rho}_{\beta\kappa}$
+    \item $\sim$ 0.5 correlation with actual eulerian spin at optimal mass filter
+    \item ``best one can hope for'' in data reconstruction
+%          \vspace{-0.15in}
+    \end{itemize}
+    }
+      
 
   \frame{
-    \frametitle{Coordinate freedom}
-\begin{eqnarray}
+    \frametitle{E-mode Coordinate}
+      reduce 3-D Lagrangian map to 1-D potential ({\it max Zeldovich}):
+    \begin{eqnarray}      
 {\rm potential\ deformation\ \ \ \ \ }  x^i &=& \xi^\mu \delta^i_\mu + \frac{\partial \phi}{\partial
     \xi^\mu}\delta^{i\mu}\nonumber\\
 {\rm dreibein\ \ \ \ \ \  } e^i_\mu &\equiv& \partial x^i / \partial \xi ^ \mu \nonumber\\
@@ -153,6 +135,20 @@ Solve Monge-Amp\'ere eqn (\ref{eqn:dif}) using multigrid (Pen 1995):
 unique bijective mass coordinate.  See also Tully/Peebles, Mohayaee+, Goldberg, Schmidtfull, Wang+, Seljak,
 Zaldarriaga, Hada/Eisenstein, Shi/Brikin/Li+, Jasche+, Sarpa+
 }
+
+\frame{
+    \frametitle{3-D: E-mode Lagrangian}
+%\vspace{-0.5in}
+\hspace{-0.2in}\includegraphics[width=2.1in]{Figures/nonlinear.png}  
+\vspace{0.15in}\includegraphics[width=2.1in]{Figures/reconstructed.png}  
+
+Eulerian (L) vs Lagrangian (R) (from Yu et al 2016, 1610.7112)
+  }
+
+\frame{
+    \frametitle{Lagrangian coordinates}
+\center{\includegraphics[width=4.3in]{Figures/delta_reco_raw.pdf}  }
+  }
 
   \frame{
     \frametitle{Multigrid solution}
@@ -177,6 +173,7 @@ Zhu et al 1610.09638
  \frame{
     \frametitle{Predicting Neutrino Torques}
     \begin{itemize}
+      \item $\nu$ gravitational field (large scale tide) torques CDM (small scale inertia)
       \item $\Delta x (q) = q^j \partial_i\partial_j \psi$
         \item $I_c \sim T_c$: both describe particle displacement
         \item $j_\nu = \epsilon T_c T_\nu$
