@@ -1,0 +1,122 @@
+\documentclass[graphics]{beamer}
+
+\usepackage{graphicx}
+\usepackage{verbatim}
+\usepackage{wrapfig}
+\useoutertheme{shadow}
+%\usecolortheme{orchid}
+\usecolortheme{seahorse}
+
+
+% math commands
+\newcommand{\be}{\begin{eqnarray}}
+\newcommand{\ee}{\end{eqnarray}}
+\newcommand{\beq}{\begin{equation}}
+\newcommand{\eeq}{\end{equation}}
+\def\simless{\mathbin{\lower 3pt\hbox
+      {$\rlap{\raise 5pt\hbox{$\char'074$}}\mathchar"7218$}}}
+\def\simgreat{\mathbin{\lower 3pt\hbox
+      {$\rlap{\raise 5pt\hbox{$\char'076$}}\mathchar"7218$}}} %> or of order
+
+% variables
+
+\def\toonscale{0.45}
+\def\mboxy#1{\mbox{\small #1}}
+
+
+\begin{comment}
+\AtBeginSection[]{
+  \frame{
+    \frametitle{Outline}
+    \tableofcontents[currentsection]
+  }
+}
+\end{comment}
+
+\title{FRB Cosmology
+}
+%\subtitle{interim update}
+\author[U. Pen]{Ue-Li Pen
+}
+\date{June 8, 2021}
+
+
+\begin{document}
+
+%\section*{Introduction}
+\section{Lenses}
+
+\begin{comment}
+  \subsection{Outline}
+
+  \frame{
+    \frametitle{Outline}
+    \tableofcontents
+  }
+\end{comment}
+
+\frame{\maketitle}
+
+
+
+  \frame{
+    \frametitle{Lenses}
+    \begin{itemize}
+        \item Gravitational Lensing: micro, macro
+        \item Plasma lensing
+        \item Coherent sources: forms interference pattern
+        \item expected (observed) for FRBs, GWs
+          
+    \end{itemize}
+  }
+  \frame{
+\vspace{-0.5in}
+    \frametitle{Macrolensing}
+    \begin{itemize}
+    \item Wucknitz+ 2021
+    \item alternate approach to cosmography
+    \item triangulation: lens model+time delay measurement = $H_0$
+    \item weak link has been lens model
+    \item Wave optics: time delay observable to nanoseconds
+    \item For repeating FRB, dominated by galaxy transverse
+      motion. then cosmic expansion
+    \item individual macrolens images split into microlens images by stars
+    \end{itemize}
+  }
+
+
+
+  \frame{
+\vspace{-0.15in}
+    \frametitle{Discussion}
+    \begin{itemize}
+    \item Eikonal effects applicable to compact radio sources,
+      e.g. FRBs, pulsars
+    \item full wave
+effect dominates for long wavelengths as Fresnel scale is bigger then Einstein radius
+    \item down to planet size
+
+    \hspace{2in}
+\includegraphics[width=0.29\textwidth]{Figures/brstfov.pdf}
+    \end{itemize}
+  }
+
+
+
+
+  \frame{
+\vspace{-0.5in}
+    \frametitle{Summary}
+    \begin{itemize}
+    \item wave optics changes nature of observables: one of the potentially most
+      precise measurements in physics
+    \item coherent radio waves (FRBs, pulsars): described by Eikonal
+      away from caustics/catastrophies
+    \item about one in 10,000 sources is lensed -- need many more
+      sources
+    \item ASIAA BRST FRB initiative: submitted to AS GC program
+    \item importance of imaginary images
+    \end{itemize}
+  }
+
+\end{document}
