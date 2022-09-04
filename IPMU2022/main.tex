@@ -48,8 +48,9 @@
 
 \frame{
 \begin{picture}(320,250)
-\put(-50,-130){
-\includegraphics[width=5.5in]{Figures/delta_nu_sim.pdf}}
+\put(-50,0){
+\includegraphics[width=5.5in]{Figures/helicalpasta.png}}
+Schaller+12, Nature, 481, 261
 \end{picture}
 \vspace{-3in}
 \titlepage
@@ -71,10 +72,11 @@
     \frametitle{Helicity}
     \begin{itemize}
         \item Macroscopic physics (gravity, E-M, etc) are parity symmetric
-        \item any observed parity asymmetry likely due to intial conditions
-        \item recent claims of detection (Hou+22, )
+        \item any observed parity asymmetry direct window to intial conditions
+        \item recent claims of detection (Hou+22, Philcox 22), upper
+          bounds (Motloch+22)
         \item large, abstract space of parity odd configurations in
-          4PCF, difficult to quantify look-elsewhere effect
+          4PCF, difficult to quantify covariances and look-elsewhere effect
         \item quadric estimator classification
         \item includes galaxy spin
         \item generation mechanisms
@@ -85,13 +87,22 @@
     \frametitle{Quadratic forms}
     \begin{itemize}
         \item analogy: CMB lensing
-        \item deflection estimator: $d_i=T \partial_i T^+$ (Okomoto-Hu)
-        \item shear estimator $\Gamma_{ij}=\partial_i T\partial_j T$ (Zhu-Pen)
-        \item 2 scalar, 1 pseudo scalar degree of freedom
-        \item lensing power is a 4PCF, directly constrains $g_{NL}$
+        \item deflection estimator: $d_i=T \partial_i \bar{T}$
+          (Okamoto-Hu++03)
+        \item shear estimator $\Gamma_{ij}=\partial_i T\partial_j T$
+          (Zhu-ULP 2011.08251)
+        \item 2 scalar ($\kappa,\gamma^E$), 1 pseudo scalar
+          ($\gamma^B$) degree of freedom
+          \item under lensing $\gamma^E=\kappa$ and $\gamma^B=0$
+            \item $\gamma^B$ souced by multi-plane lensing
+            \item $H=\gamma^E-\kappa$ sourced by tensor modes (Dodelson+02)
+        \item lensing power is a 4PCF,  related to $g_{NL}$
         \item squeezed limit $L\ll l$ reduces 4PCF to E and B lensing
           power of $L$
-        \item B power is parity-odd, not helical
+        \item B power is parity-odd, not helical: excess power in B an
+          indication of parity-odd  non-Gaussianity, distinct from
+          helicity
+\item 
      \end{itemize}
 }
 \frame{
@@ -119,11 +130,11 @@ Planck 2018
     \item $T$ decomposed into 2 scalar, 2 vector, 2 tensor components
     \item scalar trace $t=T_{ii}$, longitudinal $l=\hat{k}_i\hat{k}_j (T-t\delta_{ij}/3)$
     \item vector and tensor projected onto left and right pseudoscalars
-    \item $v^{L,R}=e^{L,R}_i \partial_j T_{ij}$
-    \item $h^{L,R}=e^{L,R}_i e^{L,r}_j T_{ij}$
-    \item helical projection operator $e^{L,R}$: eigenvectors of curl operator
-    \item Helical power asymmetry: $f_H=(P_L-P_R)/(P_L+P_R)$
+    \item $v^{L,R}=e^{L,R}_i \partial_j T_{ij}$, \ \ \ \ \ \  \  $h^{L,R}=e^{L,R}_i e^{L,R}_j T_{ij}$
+    \item helical projection operator $e^{L,R}$: unit eigenvectors of curl operator
+    \item Helical power asymmetry: $\eta=(P_L-P_R)/(P_L+P_R)$
     \item no analogy in CMB, requires 2 parity odd (helical) d.o.f
+    \item vector $\eta<10^{-3}$ (Motloch+ 2022)
     \item 
     \end{itemize}
     }
@@ -131,30 +142,20 @@ Planck 2018
 
   \frame{
 %\vspace{-0.5in}
-    \frametitle{Helical sources}
-    \begin{itemize}
-    \item helical tensor modes (Jeong+12, Masui+17)
-    \item Axion modes
-    \item Lagrangian term $g\theta F \tilde{F}$
-    \item modifies Maxwell equation $\dot{B}=\curl E+\dot{\theta}\curl B$
-    \item for coherent misalignment, leads to instability in single B
-      helical mode
-    \item proposed for early magnetogenesis (Campanelli++05)
-    \item dark sector could lead to isocurvature scalar helicity conversion
-    \end{itemize}
-    }
-      
-  \frame{
-%\vspace{-0.5in}
     \frametitle{Observables}
     \begin{itemize}
-    \item 4PCF -- not useful due to large dimension, difficult to
+    \item 4PCF -- not intuitive due to large dimension, difficult to
       compute covariance (8PCF!)
-    \item Tidal
+    \item distinguish excess power in parity odd fields from helical
+      power assymmetry!  Excess power is generic.
     \item galaxy spin
     \item magnetic field helicity
-    \item 
-    \item 
+    \item Tidal:
+    \item in analogy to B mode lensing map, create 4 helical
+      pseudo-scalar maps
+    \item vector, tensor helical auto and cross power for same helicity
+    \item L-R cross correlation violated statistical isotropy
+    \item 3 functions of $k$, huge reduction from 3-D function
     \end{itemize}
     }
        
@@ -164,16 +165,29 @@ Planck 2018
     \begin{itemize}
     \item helical vector generically sources tensor quadratic
       helicity
+      \item helical vector $B_j$ in quadratic form $T_{ij}=B_i B_j$
+        fully helical, c.f. stress-energy sources for gravitational coupling
     \item quadratic vector helicity generation still open question
-    \item 
-    \item      
-    \item 
-    \item 
     \end{itemize}
     }
  
   \frame{
-    \frametitle{Gas-DM simulations}
+%\vspace{-0.5in}
+    \frametitle{Helical sources}
+    \begin{itemize}
+    \item helical tensor modes (Jeong+12, Masui+17)
+    \item Axion modes
+    \item Lagrangian term $g\theta F \tilde{F}$
+    \item modifies Maxwell equation $\dot{B}=\nabla\times E+g\dot{\theta}\nabla\times B$
+    \item for coherent misalignment, leads to instability in single B
+      helical mode
+    \item proposed for early magnetogenesis (Campanelli++05)
+    \item dark sector could lead to isocurvature scalar helicity conversion
+    \end{itemize}
+    }
+      
+  \frame{
+    \frametitle{Galaxy Spin: Gas-DM simulations}
     \vspace{-0.1in}
     \center{\includegraphics[width=4.01in]{Figures/Illustris_Lagrangian_AM_cosangle_distributions_allgas.pdf}}
     { Shy Genel, Illustris, private communication}
@@ -187,72 +201,11 @@ Planck 2018
 Motloch+ 2021
   }
 
- 
-\frame{
-    \frametitle{3-D: E-mode Lagrangian}
-%\vspace{-0.5in}
-\hspace{-0.2in}\includegraphics[width=2.1in]{Figures/nonlinear.png}  
-\vspace{0.15in}\includegraphics[width=2.1in]{Figures/reconstructed.png}  
-
-Eulerian (L) vs Lagrangian (R) (from Yu et al 2016, 1610.7112)
-  }
- 
-  \frame{
-    \frametitle{E-mode Coordinate}
-      reduce 3-D Lagrangian map to 1-D potential ({\it max Zeldovich}):
-    \begin{eqnarray}      
-{\rm potential\ deformation\ \ \ \ \ }  x^i &=& \xi^\mu \delta^i_\mu + \frac{\partial \phi}{\partial
-    \xi^\mu}\delta^{i\mu}\nonumber\\
-{\rm dreibein\ \ \ \ \ \  } e^i_\mu &\equiv& \partial x^i / \partial \xi ^ \mu \nonumber\\
- {\rm volume\  element\ \ \ \ }\sqrt{g} &\equiv& \mathrm{det}\left| e^i_\mu\right|\nonumber\\
-{\rm mass\ coordinate \ \ \ \ \ }    \rho \sqrt{g}&=&\mathrm{Const.}\nonumber\\
-    \partial _\mu (\rho \sqrt{g} e^\mu _i \delta^{i\nu}
-    \partial_\nu \dot{\phi})&=&\langle\rho\rangle-\rho \sqrt{g}
-\label{eqn:dif}
-\end{eqnarray}
-Solve Monge-Amp\'ere eqn (\ref{eqn:dif}) using multigrid (Pen 1995):
-unique bijective mass coordinate.  See also Tully/Peebles, Mohayaee+, Goldberg, Schmidtfull, Wang+, Seljak,
-Zaldarriaga, Hada/Eisenstein, Shi/Brikin/Li+, Jasche+, Sarpa+
-}
-
- \frame{
-    \frametitle{Predicting Neutrino Torques}
-    \begin{itemize}
-      \item $\nu$ gravitational field (large scale tide) torques CDM (small scale inertia)
-      \item $\Delta x (q) = q^j \partial_i\partial_j \psi$
-        \item $I_c \sim T_c$: both describe particle displacement
-        \item $j_\nu = \epsilon I_c T_\nu \sim  \epsilon T_c T_\nu$
-        \item Neutrino tidal torque is predictable observable from
-          displacement potential
-     \end{itemize}
- }
- 
-  \frame{
-    \frametitle{Movie}
-    {\tt http://cita.utoronto.ca/\~\,haoran/thnu/movie.html}
-\includegraphics[width=4.2in]{Figures/thnucdmlowres.jpg}
-}
-
-  \frame{
-    \frametitle{Illustration}
-\vspace{-0.5in}\hspace{-0.6in}\includegraphics[width=5.0in]{Figures/f1.pdf}
-}
-
- \frame{
-    \frametitle{Size estimate}
-    \begin{itemize}
-    \item $|j_\nu/j_c| \sim 10^{-4} (f_\nu /0.003) [\sqrt{P(k_{\rm FS})/P(k_{\rm vir})}/0.03]$
-    \item agrees with simulation measurement
-    \item need $n> 10^8$ galaxy spins
-    \item accessible in next generation 21cm surveys
-     \end{itemize}
-  }
-
 
   
 \frame{
 \vspace{-0.5in}
-    \frametitle{Helicity}
+    \frametitle{Galaxy Spin Helicity}
     \begin{itemize}
     \item statistical isotropy and homogeneity allows for helicity asymmetry (e.g. weak force)
         \item NOT Goedel/Longo effect (``net $k$ independent left/right spin'')
@@ -309,30 +262,23 @@ V Schaller \& A. Bausch, Nature, 481, 268
      \end{itemize}
   }
 
-\frame{
-\vspace{-0.5in}
-    \frametitle{Helicity IC}
-    \begin{itemize}
-    \item  Helicity is probe of primordial non-gaussianity 4 point function (e.g. Cahn+ 2021)
-    \item constructable in N-body initial conditions
-    \item maximal violation straightforward to implement numerically, consistent with observations
-    \item  potentially related to inflationary two field chiral coupling 
-     \end{itemize}
-  }
-
   
 \frame{
 \vspace{-0.5in}
     \frametitle{Conclusions}
     \begin{itemize}
-      \item galaxy spins: new probe of initial conditions
-      \item predictable from observable displacement field using
-        non-linear reconstruction
-      \item computationally straightforward, mass coordinate
-            similar to Lagrangian
-          \item already observable, scalable to much larger surveys
-          \item parity odd field, less likely to be contaminated
-          \item unique probes of neutrinos, helicities, etc...
+      \item helicity is a preserved non-Gaussianity not contaminated
+        by late time non-linearity
+      \item B-mode (odd) non-Gaussianity not necessarily clean
+      \item claimed odd detections in LSS on large scales, upper
+        bounds on helicity for
+        small scales.
+      \item well preserved in galaxy spin, needs numerical work to
+        quantify for other forms
+      \item tidal classification of helical non-Gaussianity: vector,
+        tensor
+      \item reported excess in parity odd power not necessarily due to
+        helicity, more work needed        
      \end{itemize}
   }
 
