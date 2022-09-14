@@ -1,0 +1,61 @@
+\documentclass[fleqn,usenatbib]{mnras}
+%\documentclass[fleqn,usenatbib]{article}
+\usepackage{newtxtext,newtxmath}
+\usepackage[T1]{fontenc}
+\DeclareRobustCommand{\VAN}[3]{#2}
+\let\VANthebibliography\thebibliography
+\def\thebibliography{\DeclareRobustCommand{\VAN}[3]{##3}\VANthebibliography}
+\usepackage{graphicx}   % Including figure files
+\usepackage{amsmath}    % Advanced maths commands
+
+
+
+
+
+\title[nearby FRBs]{Surveying the nearest FRBs}
+\author[ U-L. Pen]{
+U-L. Pen$^{ASIAA,CITA}$\thanks{E-mail: pen@asiaa.sinica.edu.tw   }
+}
+\begin{document}
+\label{firstpage}
+\pagerange{\pageref{firstpage}--\pageref{lastpage}}
+\maketitle
+
+\section{Self-Introduction}
+
+I am Ue-Li Pen, currently director of the Academia Sinica Institute for Astronomy and Astrophysics in Taiwan, and on part time leave from the Canadian Institute for Theoretical Astrophysics.  My background is in theoretical cosmology, which lead to interests in 21cm cosmology and dedicated experiments.  I instigated the CHIME experiment in Canada following an initial prototype with Jeff Peterson in Pittburgh. After assembling the CHIME cosmology team in Canada, we expanded the novel fast survey instrument team to include an FRB back-end and science team.  The large field of view delivered a high FRB discovery rate, but filled aperture had limited localization capability.  Expanding on previous pulsar VLBI experience, we deployed VLBI FRB outrigger pathfinders at Algonquin (Ontario) and Green Bank (TONE), resulting in the field VLBI localization of non-repeating FRBs.  The Moore foundation invested in 3 cylinder outriggers that aim to localize all CHIME FRBs.
+
+While CHIME was optimized as a 21cm instrument, the next opportunity is a dedicated FRB instrument that surveys the whole sky all the time with VLBI outriggers.  The Taiwan BURSTT initiative aims to fill this niche.
+
+\section{BURSTT}
+
+The quest for multi-wavelength and multi-messenger counterparts is limited by the instantaneous field of view of FRB surveys.  CHIME, being the largest, only monitors less than one percent of the sky.  An effort to monitor the whole sky maximizes the possibility of catching an FRB at the same time as another band, including high energy, gravitational waves, neutrinos or cosmic rays.  Catching the nearest FRBs as they burst will also fill the bridge to local counterparts in the milky way or neighboring galaxies.
+
+\begin{figure}
+%\epsscale{0.75}
+\includegraphics[width=\linewidth,keepaspectratio]{images/telescopes_comparison.png}
+\caption{Comparison of BURSTTs FoV, effective collecting area, sensitivity (SEFD), and FRB detection rate (dashed lines) vs. existing (solid), planned (outline), and future-concept (dotted circle) observatories. Rates(dashed lines) were calibrated to CHIME, assuming Euclidean rates and 400 MHz bandwidth. Open triangles are sparse interferometers, which provide arcsecond localization and would require correlator upgrades to achieve these rates. The rate is a hypothetically upper limit, with the assumption of 24/7 FRB searches (which only CHIME/FRB does) as well as the optimal FRB searches with coherently beam-forming for the interferometry (ASKAP, VLA).  BURSTT is unique in the large FoV with enough sensitivity to detect a large sample of bright and nearby FRBs. 
+\label{fig:telescopes_comparison}}
+\end{figure}
+
+The BURSTT telescope is a phased array imager, in close design analogy with CHIME, but without the cylinders (arXiv:2206.08983).  It forms all sky beams all the time, in analogy to an FFT telescope (Tegmark and Zaldarriaga 2009, PRD 79, 083530). The sensitivity and Field of View comparison are shown in Figure \ref{fig:telescopes_comparison}.
+
+
+Its first phase, currently under deployment, consists of a main station with 256 elements in Fushan, with 3 outrigger stations across Taiwan and outlying islands, as well as a station in Hawaii.  The main station is illustrated in Figure \ref{fig:256_layout}
+
+\begin{figure}
+%\epsscale{0.8}
+\includegraphics[width=\linewidth,keepaspectratio]{images/256_layout.png}
+\caption{BURSTT 256-antenna array station layout. 
+\label{fig:256_layout}}
+\end{figure}
+
+\section{Future}
+
+The FFTT design is linearly scalable, with the next stage goal a 2048 element main array.  The FRB rate is proportional to $n^{3/2}$, where $n$ is the number of elements, so the cost per FRB decreases with increasing antenna count.  The dominant cost in the current system lies in the RFSoC digitizing FPGA.  The development boards cost approximately \$1000/antenna.
+
+The intrinsic cost of digitization can be substantially lower, and our group has been experimenting with commodity USB controllers such as the Cypress EZ-USB, potentially making an order of magnitude cost reduction feasible.   Arrays with $O(10^5)$ elements, detecting thousands of FRBs per day could be implemented.  We encourage the community to explore science with very large samples.
+
+\bsp    % typesetting comment
+\label{lastpage}
+\end{document}
