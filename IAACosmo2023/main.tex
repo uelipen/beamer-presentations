@@ -41,7 +41,7 @@
 \author[U. Pen]{\textcolor{green}{Ue-Li Pen, ASIAA, CITA}
 \\[8mm] 
 }
-\date{September 5, 2022}
+\date{December 6, 2023}
 
 
 \begin{document}
@@ -73,7 +73,7 @@ Schaller+12, Nature, 481, 261
     \begin{itemize}
         \item Macroscopic physics (gravity, E-M, etc) are parity symmetric
         \item any observed parity asymmetry direct window to intial conditions
-        \item recent claims of detection (Hou+22, Philcox 22), upper
+        \item recent reports of detection (Hou+22, Philcox 22), upper
           bounds (Motloch+22)
         \item large, abstract space of parity odd configurations in
           4PCF, difficult to quantify covariances and look-elsewhere effect
@@ -114,12 +114,6 @@ Schaller+12, Nature, 481, 261
 Planck 2018
   }
 
-\frame{
-    \frametitle{CMB-B}
-\vspace{-0.15in}
-\hspace{-0in}\includegraphics[width=2.8in]{Figures/plancklensb.png}  
-Planck 2018
-  }
 
   \frame{
 %\vspace{-0.5in}
@@ -135,8 +129,23 @@ Planck 2018
     \item in analogy to B mode lensing map, create 4 helical
       pseudo-scalar maps
     \item vector, tensor helical auto and cross power for same helicity
-    \item L-R cross correlation violated statistical isotropy
-    \item 3 functions of $k$, huge reduction from 3-D function
+    \item L-R cross correlation violates statistical isotropy
+    \item 2 functions of $k$, huge reduction from 3-D function
+    \end{itemize}
+    }
+
+     
+  \frame{
+%\vspace{-0.5in}
+    \frametitle{From statistics to realizations:}
+    \begin{itemize}
+    \item need prescription to initialize N-body simulations
+    \item e.g. for $f_{NL}$, prescriptions developed for various
+      (squeezed, equilateral, ortho) configurations
+    \item procedure not unique: for 1 d.o.f. PDF, a small number of
+      moments do not specify PDF
+    \item minimalist approach: projected Gaussian random field, c.f. Lensing
+    \item (note does not generate 3PCF)
     \end{itemize}
     }
        
@@ -144,6 +153,7 @@ Planck 2018
 %\vspace{-0.5in}
     \frametitle{Helicity Generation: Vectors}
     \begin{itemize}
+    \item work done by Junsup Shim
     \item prescription: 
     \item 1. generate scalar Gaussian Random field
     \item 2. generate (L) helical vector displacement field
@@ -157,6 +167,7 @@ Planck 2018
 %\vspace{-0.5in}
     \frametitle{Helicity Generation: Tensors}
     \begin{itemize}
+    \item work done by Hongming Zhu
     \item cannot be done by displacement field: not enough d.o.f.
     \item 1. generate (L) helical TT tensor field $h_{ij}$
     \item 2. use $h_{ij}$ as metric to calculate geodesic distance
@@ -168,17 +179,77 @@ Planck 2018
     }
 
 
+  \frame{
+%\vspace{-0.5in}
+    \frametitle{Practical considerations}
+    \begin{itemize}
+    \item Helical vectors: at large amplitudes, lattice poisson noise generation
+    \item Helical tensors: computational shortcut in squeezed limit
+      using convolutions
+    \item direct correspondence to helical tensor fossils (Masui+17)
+    \end{itemize}
+    }
+
 
  
 \frame{
-    \frametitle{Measurement}
+    \frametitle{Helical Tensors}
 %\vspace{-0.5in}
-\hspace{-0in}\includegraphics[width=2.9in]{Figures/spincorr.pdf}  
-Motloch+ 2021
+\hspace{-0in}\includegraphics[width=2.5in]{Figures/tensorLR.jpg}  
+Masui+17
   }
 
+ 
+
+ 
+\frame{
+    \frametitle{Helical Vectors}
+%\vspace{-0.5in}
+\hspace{-0in}\includegraphics[width=4.5in]{Figures/Helicalvectors.pdf}  
+
+Junsup+24
+  }
+
+ 
+\frame{
+    \frametitle{Helical Tensors}
+%\vspace{-0.5in}
+\hspace{-0in}\includegraphics[width=4.0in]{Figures/Gaussian_map.pdf}  
+  }
+
+ 
+\frame{
+    \frametitle{Helical Tensors}
+%\vspace{-0.5in}
+\hspace{-0in}\includegraphics[width=4.0in]{Figures/Tensor_Non-stationary_1e2.pdf}  
+  }
 
   
+\frame{
+    \frametitle{Helical Tensors}
+%\vspace{-0.5in}
+\hspace{-0in}\includegraphics[width=4.0in]{Figures/Tensor_Diff_1e2.pdf}  
+  }
+
+\frame{
+    \frametitle{Helical Tensors}
+%\vspace{-0.5in}
+\hspace{-0in}\includegraphics[width=3.5in]{Figures/tensorhL.jpg}  
+  }
+
+  
+\frame{
+    \frametitle{Helical Tensors}
+%\vspace{-0.5in}
+\hspace{-0in}\includegraphics[width=4.0in]{Figures/Tensor_Gaussian_800Mpc.pdf}  
+  }
+
+\frame{
+    \frametitle{Helical Tensors}
+%\vspace{-0.5in}
+\hspace{-0in}\includegraphics[width=4.0in]{Figures/Tensor_Non-stationary_1e3_800Mpc.pdf}  
+  }
+
 \frame{
 \vspace{-0.5in}
     \frametitle{Galaxy Spin Helicity}
@@ -190,15 +261,29 @@ Motloch+ 2021
      \end{itemize}
   }
 
+\frame{
+    \frametitle{Illustris TNG simulations}
+%\vspace{-0.5in}
+\hspace{-0in}\includegraphics[width=2.9in]{Figures/tngspin.jpg}  
+Sheng+23
+  }
 
-  
+
+\frame{
+    \frametitle{Measurement}
+%\vspace{-0.5in}
+\hspace{-0in}\includegraphics[width=2.9in]{Figures/spincorr.pdf}  
+Motloch+ 2021
+  }
+
+
 \frame{
 \vspace{-0.5in}
     \frametitle{Helicity results}
     \begin{itemize}
-    \item   $\mu_L &=& \(0.41 \pm 0.53\) \times 10^{-2}$  maximal left is allowed
-      \item $\mu_R &=& \(1.99 \pm 0.53\) \times 10^{-2} $  maximal right is disfavoured!
-      \item $\mu_- = \(-1.58 \pm 0.75\) \times 10^{-2}$  Parity symmetry is allowed \dSmiley % \DejaSans{ ☺}
+    \item   $\mu_L = (0.41 \pm 0.53) \times 10^{-2}$  maximal left is allowed
+      \item $\mu_R= (1.99 \pm 0.53) \times 10^{-2} $  maximal right is disfavoured!
+      \item $\mu_- = (-1.58 \pm 0.75) \times 10^{-2}$  Parity symmetry is allowed 
      \end{itemize}
   }
 
@@ -209,9 +294,11 @@ Motloch+ 2021
     \begin{itemize}
       \item helicity is a preserved non-Gaussianity not created
         by late time non-linearity
-      \item tidal classification of helical non-Gaussianity: vector,
+      \item quadratic classification of helical non-Gaussianity: vector,
         tensor
-      \item 
+      \item quantified initial conditions and evolution for galaxy
+        spin fields and tidal fossils in 
+        simulations (see Junsup's talk)
      \end{itemize}
   }
 
