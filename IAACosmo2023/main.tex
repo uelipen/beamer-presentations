@@ -1,0 +1,306 @@
+\documentclass[graphics]{beamer}
+
+\usepackage{graphicx}
+\usepackage{verbatim}
+\usepackage{wrapfig}
+\useoutertheme{shadow}
+%\usecolortheme{orchid}
+\usecolortheme{seahorse}
+\usepackage{tikzsymbols}
+\usepackage{textcomp}
+\usepackage{parskip}
+
+% math commands
+\newcommand{\be}{\begin{eqnarray}}
+\newcommand{\ee}{\end{eqnarray}}
+\newcommand{\beq}{\begin{equation}}
+\newcommand{\eeq}{\end{equation}}
+\def\simless{\mathbin{\lower 3pt\hbox
+      {$\rlap{\raise 5pt\hbox{$\char'074$}}\mathchar"7218$}}}
+\def\simgreat{\mathbin{\lower 3pt\hbox
+      {$\rlap{\raise 5pt\hbox{$\char'076$}}\mathchar"7218$}}} %> or of order
+
+% variables
+
+\def\toonscale{0.45}
+\def\mboxy#1{\mbox{\small #1}}
+
+
+\begin{comment}
+\AtBeginSection[]{
+  \frame{
+    \frametitle{Outline}
+    \tableofcontents[currentsection]
+  }
+}
+\end{comment}
+
+\title{Helical (Parity Odd) Initial conditions
+}
+\subtitle{}
+\author[U. Pen]{\textcolor{green}{Ue-Li Pen, ASIAA, CITA}
+\\[8mm] 
+}
+\date{December 6, 2023}
+
+
+\begin{document}
+
+\frame{
+\begin{picture}(320,250)
+\put(-50,0){
+\includegraphics[width=5.5in]{Figures/helicalpasta.png}}
+Schaller+12, Nature, 481, 261
+\end{picture}
+\vspace{-3in}
+\titlepage
+}
+
+%\section*{Introduction}
+\section{Helicity: probe of the early universe}
+
+\begin{comment}
+  \subsection{Outline}
+
+  \frame{
+    \frametitle{Outline}
+    \tableofcontents
+  }
+\end{comment}
+
+   \frame{
+    \frametitle{Helicity}
+    \begin{itemize}
+        \item Macroscopic physics (gravity, E-M, etc) are parity symmetric
+        \item any observed parity asymmetry direct window to intial conditions
+        \item recent reports of detection (Hou+22, Philcox 22), upper
+          bounds (Motloch+22)
+        \item large, abstract space of parity odd configurations in
+          4PCF, difficult to quantify covariances and look-elsewhere effect
+        \item quadric estimator classification
+        \item includes galaxy spin
+        \item {\bf generation mechanisms }
+     \end{itemize}
+}
+
+  \frame{
+    \frametitle{Quadratic forms}
+    \begin{itemize}
+        \item analogy: CMB lensing
+        \item deflection estimator: $d_i=T \partial_i \bar{T}$
+          (Okamoto-Hu++03)
+        \item shear estimator $\Gamma_{ij}=\partial_i T\partial_j T$
+          (Zhu-ULP 2011.08251)
+        \item 2 scalar ($\kappa,\gamma^E$), 1 pseudo scalar
+          ($\gamma^B$) degree of freedom
+          \item under lensing $\gamma^E=\kappa$ and $\gamma^B=0$
+            \item $\gamma^B$ souced by multi-plane lensing
+            \item $H=\gamma^E-\kappa$ sourced by tensor modes (Dodelson+02)
+        \item lensing power is a 4PCF,  related to $g_{NL}$
+        \item squeezed limit $L\ll l$ reduces 4PCF to E and B lensing
+          power of $L$
+        \item B power is parity-odd, not helical: excess power in B an
+          indication of parity-odd  non-Gaussianity, distinct from
+          helicity
+\item 
+     \end{itemize}
+}
+
+\frame{
+    \frametitle{CMB}
+\vspace{-0.15in}
+\hspace{-0in}\includegraphics[width=4.2in]{Figures/plancklens.png}  
+
+Planck 2018
+  }
+
+
+  \frame{
+%\vspace{-0.5in}
+    \frametitle{Observables}
+    \begin{itemize}
+    \item 4PCF -- not intuitive due to large dimension, difficult to
+      compute covariance (8PCF!)
+    \item distinguish excess power in parity odd fields from helical
+      power assymmetry!  Excess power is generic.
+    \item galaxy spin
+    \item magnetic field helicity
+    \item Tidal:
+    \item in analogy to B mode lensing map, create 4 helical
+      pseudo-scalar maps
+    \item vector, tensor helical auto and cross power for same helicity
+    \item L-R cross correlation violates statistical isotropy
+    \item 2 functions of $k$, huge reduction from 3-D function
+    \end{itemize}
+    }
+
+     
+  \frame{
+%\vspace{-0.5in}
+    \frametitle{From statistics to realizations:}
+    \begin{itemize}
+    \item need prescription to initialize N-body simulations
+    \item e.g. for $f_{NL}$, prescriptions developed for various
+      (squeezed, equilateral, ortho) configurations
+    \item procedure not unique: for 1 d.o.f. PDF, a small number of
+      moments do not specify PDF
+    \item minimalist approach: projected Gaussian random field, c.f. Lensing
+    \item (note does not generate 3PCF)
+    \end{itemize}
+    }
+       
+  \frame{
+%\vspace{-0.5in}
+    \frametitle{Helicity Generation: Vectors}
+    \begin{itemize}
+    \item work done by Junsup Shim
+    \item prescription: 
+    \item 1. generate scalar Gaussian Random field
+    \item 2. generate (L) helical vector displacement field
+    \item 3. remap (1) using (2) as done for lensing
+    \item this generations a stationary helical scalar field with
+      parity odd 4PCF of large amplitude.
+    \end{itemize}
+    }
+
+  \frame{
+%\vspace{-0.5in}
+    \frametitle{Helicity Generation: Tensors}
+    \begin{itemize}
+    \item work done by Hongming Zhu
+    \item cannot be done by displacement field: not enough d.o.f.
+    \item 1. generate (L) helical TT tensor field $h_{ij}$
+    \item 2. use $h_{ij}$ as metric to calculate geodesic distance
+      between pairs of points $d(x_i,x_j)$
+    \item 3. diagonalize covariance matrix $C_{ij}=\xi^{-1}d(x_i,x_j)$
+    \item pick gaussian random numbers with variance of the
+      eigenvalues
+    \end{itemize}
+    }
+
+
+  \frame{
+%\vspace{-0.5in}
+    \frametitle{Practical considerations}
+    \begin{itemize}
+    \item Helical vectors: at large amplitudes, lattice poisson noise generation
+    \item Helical tensors: computational shortcut in squeezed limit
+      using convolutions
+    \item direct correspondence to helical tensor fossils (Masui+17)
+    \end{itemize}
+    }
+
+
+ 
+\frame{
+    \frametitle{Helical Tensors}
+%\vspace{-0.5in}
+\hspace{-0in}\includegraphics[width=2.5in]{Figures/tensorLR.jpg}  
+Masui+17
+  }
+
+ 
+
+ 
+\frame{
+    \frametitle{Helical Vectors}
+%\vspace{-0.5in}
+\hspace{-0in}\includegraphics[width=4.5in]{Figures/Helicalvectors.pdf}  
+
+Junsup+24
+  }
+
+ 
+\frame{
+    \frametitle{Helical Tensors}
+%\vspace{-0.5in}
+\hspace{-0in}\includegraphics[width=4.0in]{Figures/Gaussian_map.pdf}  
+  }
+
+ 
+\frame{
+    \frametitle{Helical Tensors}
+%\vspace{-0.5in}
+\hspace{-0in}\includegraphics[width=4.0in]{Figures/Tensor_Non-stationary_1e2.pdf}  
+  }
+
+  
+\frame{
+    \frametitle{Helical Tensors}
+%\vspace{-0.5in}
+\hspace{-0in}\includegraphics[width=4.0in]{Figures/Tensor_Diff_1e2.pdf}  
+  }
+
+\frame{
+    \frametitle{Helical Tensors}
+%\vspace{-0.5in}
+\hspace{-0in}\includegraphics[width=3.5in]{Figures/tensorhL.jpg}  
+  }
+
+  
+\frame{
+    \frametitle{Helical Tensors}
+%\vspace{-0.5in}
+\hspace{-0in}\includegraphics[width=4.0in]{Figures/Tensor_Gaussian_800Mpc.pdf}  
+  }
+
+\frame{
+    \frametitle{Helical Tensors}
+%\vspace{-0.5in}
+\hspace{-0in}\includegraphics[width=4.0in]{Figures/Tensor_Non-stationary_1e3_800Mpc.pdf}  
+  }
+
+\frame{
+\vspace{-0.5in}
+    \frametitle{Galaxy Spin Helicity}
+    \begin{itemize}
+    \item statistical isotropy and homogeneity allows for helicity asymmetry (e.g. weak force)
+        \item NOT Goedel/Longo effect (``net $k$ independent left/right spin'')
+        \item angular momentum measures twist of tidal tensor
+        \item helicity measures twist projected along $k$ vector 
+     \end{itemize}
+  }
+
+\frame{
+    \frametitle{Illustris TNG simulations}
+%\vspace{-0.5in}
+\hspace{-0in}\includegraphics[width=2.9in]{Figures/tngspin.jpg}  
+Sheng+23
+  }
+
+
+\frame{
+    \frametitle{Measurement}
+%\vspace{-0.5in}
+\hspace{-0in}\includegraphics[width=2.9in]{Figures/spincorr.pdf}  
+Motloch+ 2021
+  }
+
+
+\frame{
+\vspace{-0.5in}
+    \frametitle{Helicity results}
+    \begin{itemize}
+    \item   $\mu_L = (0.41 \pm 0.53) \times 10^{-2}$  maximal left is allowed
+      \item $\mu_R= (1.99 \pm 0.53) \times 10^{-2} $  maximal right is disfavoured!
+      \item $\mu_- = (-1.58 \pm 0.75) \times 10^{-2}$  Parity symmetry is allowed 
+     \end{itemize}
+  }
+
+  
+\frame{
+\vspace{-0.5in}
+    \frametitle{Conclusions}
+    \begin{itemize}
+      \item helicity is a preserved non-Gaussianity not created
+        by late time non-linearity
+      \item quadratic classification of helical non-Gaussianity: vector,
+        tensor
+      \item quantified initial conditions and evolution for galaxy
+        spin fields and tidal fossils in 
+        simulations (see Junsup's talk)
+     \end{itemize}
+  }
+
+
+\end{document}
