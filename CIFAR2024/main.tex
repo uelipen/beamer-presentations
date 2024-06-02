@@ -1,0 +1,135 @@
+\documentclass[graphics]{beamer}
+
+\usepackage{graphicx}
+\usepackage{verbatim}
+\usepackage{wrapfig}
+\useoutertheme{shadow}
+%\usecolortheme{orchid}
+\usecolortheme{seahorse}
+
+
+% math commands
+\newcommand{\be}{\begin{eqnarray}}
+\newcommand{\ee}{\end{eqnarray}}
+\newcommand{\beq}{\begin{equation}}
+\newcommand{\eeq}{\end{equation}}
+\def\simless{\mathbin{\lower 3pt\hbox
+      {$\rlap{\raise 5pt\hbox{$\char'074$}}\mathchar"7218$}}}
+\def\simgreat{\mathbin{\lower 3pt\hbox
+      {$\rlap{\raise 5pt\hbox{$\char'076$}}\mathchar"7218$}}} %> or of order
+
+% variables
+
+\def\toonscale{0.45}
+\def\mboxy#1{\mbox{\small #1}}
+
+
+\begin{comment}
+\AtBeginSection[]{
+  \frame{
+    \frametitle{Outline}
+    \tableofcontents[currentsection]
+  }
+}
+\end{comment}
+
+\title{Parity (violation) of the PTA gravitational wave background
+}
+%\subtitle{interim update}
+\author[U. Pen]{Anna Tsai, Dylan Jow, Ue-Li Pen
+}
+\date{June 3, 2024}
+
+
+\begin{document}
+
+%\section*{Introduction}
+\section{Lenses}
+
+\begin{comment}
+  \subsection{Outline}
+
+  \frame{
+    \frametitle{Outline}
+    \tableofcontents
+  }
+\end{comment}
+
+\frame{\maketitle}
+
+
+
+
+  \frame{
+    \frametitle{Pulsar Timing Arrays}
+    \begin{itemize}
+        \item first evidence of signal 2023 (nanoGrav et al)
+        \item due to supermassive black holes, or primordial
+        \item polarized?
+    \end{itemize}
+  }
+
+
+  \frame{
+
+    \frametitle{Is isotropic polarization detectable?}
+   \begin{itemize}
+        \item Boyle/ULP 2012+, Roebber+2017
+        \item no-go theorems: Belgacem/Kamionkowski 2020, Kato/Soda 2016
+        \item real timing residuals map to complex frequency residuals
+        \item what correlations are allowed between complex fields on
+          a sphere? 
+        \item $\tau(\omega,\theta,\phi)=u(\theta,\phi)+i v(\theta,\phi)$
+        \item CF CMB tensor mode helicity (Masui+2017): curved sky effects
+    \end{itemize}
+  }
+
+    \frametitle{PTA redshift maps}
+\vspace{-0.25in}
+\begin{center}
+\hspace{-0.5in}
+\includegraphics[width=3.5in]{Figures/RH17.jpg}
+\end{center}
+  }
+
+
+  \frame{
+
+    \frametitle{Subtle but strong}
+   \begin{itemize}
+        \item $\chi \equiv \nabla u \times \nabla v$
+        \item $\bar{\chi}=\int \chi \d\Omega = -3$
+        \item violates Fubini theorem
+        \item arises from non-commuting derivatives
+    \end{itemize}
+  }
+
+  \frame{
+
+    \frametitle{3/6 point quadratic?}
+   \begin{itemize}
+        \item $\chi$ is explicitly quadratic in timing residuals
+        \item gradient requires 3 pulsars
+        \item Polarized extension of Hellings-Downs curve using pulsar triplets
+    \end{itemize}
+  }
+
+
+
+
+
+  \frame{
+%\vspace{-0.5in}
+    \frametitle{Summary}
+    \begin{itemize}
+     \item Many pulsars exhibit highly 1-D lensing, local in distance
+     \item inverted arclets correspond to isolated lensed images
+      \item ISM plasma screens modelled quantitatively as localized
+        folds on sheets (c.f. Goldreich+Shridhar 2006) 
+      \item questions: measuring surfaces in ISM? 
+      \item potential: measure differential RM, DM in images?
+      \item magnetic domain boundaries, reconnection sheets?
+    \end{itemize}
+  }
+
+\end{document}
