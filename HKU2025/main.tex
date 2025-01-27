@@ -95,7 +95,7 @@ FRBs; and highlighted their potential as cosmological probes.
 \includegraphics[width=2.5in]{Figures/scint110523.png}
 \includegraphics[width=1.75in]{Figures/corr110523.png}
 
-Masui++ 2015, Nature, 528, 523
+Masui+ULP++ 2015, Nature, 528, 523
   }
 
 
@@ -105,9 +105,7 @@ Masui++ 2015, Nature, 528, 523
     \begin{itemize}
         \item Interference effects under multi-path propagation: same
           class as GWs
-        \item potential for diffraction limited measurements
-        \item Kirchoff-Fresnel path integral
-        \item evanescent images
+        \item potential for diffraction limited measurements: cosmic distances
         \item BURSTT
     \end{itemize}
   }
@@ -148,7 +146,7 @@ Masui++ 2015, Nature, 528, 523
 \end{center}
   }
 
-\section{VLBI}
+\section{Coherent VLBI}
 
   \frame{
 
@@ -156,28 +154,40 @@ Masui++ 2015, Nature, 528, 523
 \vspace{-0.25in}
 \begin{center}
 \hspace{-0.5in}
-\includegraphics[width=3.5in]{Figures/rawvlbi.png}
+\includegraphics[width=3.25in]{Figures/rawvlbi.png}
 \end{center}
   }
   \frame{
-%\vspace{-0.25in}
+\vspace{-0.25in}
     \frametitle{Scintillometry VLBI}
 \hspace{-0.25in}
 \includegraphics[width=3.5in]{Figures/VLBI0834.png}
 \includegraphics[width=1.05in]{Figures/jpm.png}
-
-Baker++: increase PTA angular resolution to arcminutes.  In memoriam J-P Macquart.
+{\tiny
+Baker++: increase PTA angular resolution to arcminutes.  In memoriam
+J-P Macquart.
+}
   }
 
 
   \frame{
-
-    \frametitle{precision astrometry}
-\vspace{-0.25in}
-\begin{center}
-\hspace{-0.5in}
-\includegraphics[width=5.5in]{Figures/VLBIdist.pdf}
-\end{center}
+    \frametitle{ISM Sheets}
+    \begin{itemize}
+      \item reconnection sheets
+    \item grazing incidence
+    \item ULP + King 2012
+    \item ULP + Levin 2014
+    \item Liu + ULP 2015
+    \item 1-D structure
+    \item localized scattering
+%    \item predicts RM gradient
+    \end{itemize}
+\begin{picture}(320,235)
+\put(110,170){
+\includegraphics[width=3.0in]{Figures/toronto-skyline.png}}
+\put(-60,-207){
+\includegraphics[width=5.5in]{Figures/sheetgeom.eps}}
+\end{picture}
   }
 
 
@@ -192,116 +202,35 @@ UP+14
 \end{center}
   }
 
-\section{Coherence}
+ \frame{
 
-  \frame{
-\vspace{-0.25in}
-    \frametitle{Optics: Geometric, Eikonal, Wave, P-L}
-    \begin{itemize}
-        \item Consider 1-D lens
-        \item lensing potential $\Psi(\theta)$
-        \item deflection $\Psi'$
-        \item simplify for $D_{\rm ds}=\infty$
-    \end{itemize}
-\vspace{-0.5in}\hspace{2.5in}\includegraphics[width=1.5in]{Figures/lens.png}
-
-  }
-
-
-  \frame{
-\vspace{-0.25in}
-    \frametitle{Huygen's Principle: Path Integral}
-    \begin{itemize}
-        \item $A(\mu)=\int e^{i S(\theta,\mu)} d\theta$ 
-        \item $S=\nu [(\theta-\mu)^2+\Psi(\theta)]$
-        \item Highly oscillatory integral, even for $\Psi=0$
-        \item Stationary phase points: $\partial_\theta S=0$ leads to (complex)
-          Eikonal images $\theta_i$.
-        \item flux/phase through curvature expansion (known as {\it
-            steepest descent}): exact as $\nu \rightarrow \infty$
-        \item Geometric limit considers only {\it Real} solutions $\theta_i$ and
-      gives up phase
-          information (length of trajectory)
-        \item Geometric optics applicable at short wavelengths for
-          extended sources
-          (e.g. optical gravitational lensing of finite size sources,
-          stars)     
-          \item roughly 1/4 of the degrees of freedom of Eikonal 
-    \end{itemize}
-  }
-  \frame{
-\vspace{-0.5in}
-    \frametitle{Evanescent Images}
-    \begin{itemize}
-    \item consider ``rational lens'' potential $\psi(\theta)=\alpha/(1+\theta^2)$
-    \item Geometric/eikonal images at $\psi'=\theta$
-    \item 5 roots.  1 or 3 real roots, rest imaginary
-    \item P-L: at most one imaginary image contributes!
-    \item Resurgence theory to classify?
-    \item Evanescent (imaginary) image can be brighter than unlensed real image
-    \end{itemize}
-  }
-
-
-  \frame{
-%\vspace{-0.5in}
-    \frametitle{Rational 1-D lens}
+    \frametitle{Hubble Constant}
+%\vspace{-0.25in}
 \begin{center}
-\includegraphics[width=3.1in]{Figures/theta-beta.eps}
+%\hspace{-0.5in}
+\includegraphics[width=2.05in]{Figures/frbh0.jpg}
+Tsai, Jow, UP 2025
 \end{center}
   }
 
-  
+ 
   \frame{
-\vspace{-0.5in}
-    \frametitle{Picard-Lefschetz Theory}
-    \begin{itemize}
-    \item descend integral along real line along Morse function Im(S)
-    \item contour deforms into finite number of Thimbles of constant
-      phase with maximum at saddle point (extrema $dS=0$)
-    \item correctly identifies relevant saddle points
-    \item resolves numerical challenges of oscillatory integral
-    \item complex analysis works in multiple variables
-    \item elevates concept of ``image'' deep into wave optics
-    \item multiple public implementations (Feldbrugge+, Jow+)
-    \end{itemize}
-  }
-
-
-
-
-  \frame{
-\vspace{-0.5in}
-    \frametitle{Picard-Lefschetz Theory}
-
-\includegraphics[width=4.5in]{Figures/thimbles.png}
-
-Feldbrugge+2019
-  }
-
-
-  
-
-  \frame{
-\vspace{-0.5in}
+%\vspace{-0.5in}
     \frametitle{New Observables}
     \begin{itemize}
     \item for coherent sources: FRBs, pulsars
-    \item weak lensing: imaginary image allows time delay measurement (Jow+21)
-    \item strong lensing: delay measurements enable measurement of
-      co-linearity (Jow++21)
+    \item phase retrieval allows wave field mapping: analogous to radar
+%    \item weak lensing: imaginary image allows time delay measurement (Jow+21)
     \item microlensing: instant time delay, planets (Jow+20)
     \item macrolensing: potentially nano-second delay -- universe
       expands!  Dark energy, etc (Wucknitz+21)
-    \item dimensionless strain cm/Gigalightyears $h\sim \Delta t/t \sim 10^{-26}$:
-      competitive with LIGO, etc
     \end{itemize}
   }
 
 
   \frame{
 
-    \frametitle{Catastrophes}
+    \frametitle{Catastrophes: Exreme Scattering Events}
 \includegraphics[width=2.85in]{Figures/cusp.png}
 \includegraphics[width=0.5in]{Figures/cuspcaption.png}
 Jow+2301.08344
@@ -309,21 +238,11 @@ Jow+2301.08344
 
     \frametitle{Extreme Scattering Events}
 %\hspace{-0.5in}
+\vspace{0.5in}
 \begin{center}
 \includegraphics[width=4.65in]{Figures/esemodel.pdf}
 \end{center}
   }
-
-
-  \frame{
-%\vspace{-0.25in}
-    \frametitle{Macro lensing}
-\includegraphics[width=4.5in]{Figures/wucknitz.png}
-
-Wucknitz, Spitler, ULP 2021, A\&A, 645, A44
-  }
-
-
 
 
   \frame{
@@ -403,10 +322,12 @@ effect dominates for long wavelengths as Fresnel scale is bigger then Einstein r
       \item already makes microarcsecond images of pulsars
       \item ISM plasma screens modelled quantitatively as localized
         1-D features, no longer stochastic turbulent volume.
+      \item ESEs potentially arise from cusp folds, not from exploding
+        dark matter or cosmic strings.
       \item next generation FRB telescopes for cosmic mass inventory,
         possibly dark energy/acceleration
-      \item PTA weak diffractive lensing may give new tool for Hubble
-        Constant tension
+ 
+      \item BURSTT completed phase 1 deployment, under commissioning
     \end{itemize}
   }
 
