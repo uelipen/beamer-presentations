@@ -1,0 +1,265 @@
+\documentclass[graphics]{beamer}
+
+\usepackage{graphicx}
+\usepackage{verbatim}
+\usepackage{wrapfig}
+\useoutertheme{shadow}
+%\usecolortheme{orchid}
+\usecolortheme{seahorse}
+
+
+% math commands
+\newcommand{\be}{\begin{eqnarray}}
+\newcommand{\ee}{\end{eqnarray}}
+\newcommand{\beq}{\begin{equation}}
+\newcommand{\eeq}{\end{equation}}
+\def\simless{\mathbin{\lower 3pt\hbox
+      {$\rlap{\raise 5pt\hbox{$\char'074$}}\mathchar"7218$}}}
+\def\simgreat{\mathbin{\lower 3pt\hbox
+      {$\rlap{\raise 5pt\hbox{$\char'076$}}\mathchar"7218$}}} %> or of order
+
+% variables
+
+\def\toonscale{0.45}
+\def\mboxy#1{\mbox{\small #1}}
+
+
+\begin{comment}
+\AtBeginSection[]{
+  \frame{
+    \frametitle{Outline}
+    \tableofcontents[currentsection]
+  }
+}
+\end{comment}
+
+\title{PTA Imaging: resolution+polarization
+}
+%\subtitle{interim update}
+\author[U. Pen]{Ue-Li Pen, Anna Tsai, Dylan Jow
+}
+\date{April 22, 2025}
+
+
+\begin{document}
+
+%\section*{Introduction}
+\section{Lenses}
+
+\begin{comment}
+  \subsection{Outline}
+
+  \frame{
+    \frametitle{Outline}
+    \tableofcontents
+  }
+\end{comment}
+
+\frame{\maketitle}
+
+
+
+  \frame{
+    \frametitle{(Incoherent) Pulsar Timing Arrays (PTAs)}
+    \begin{itemize}
+      \item initial GW evidence in 2023 (nanoGrav++)
+        \item currently from a few dozen nearby PSRs
+        \item often described as ``stochastic'' background
+        \item currently analyzed in ``incoherent'' mode: pulsar
+          distance not used (and often not known)
+        \item Number of pixels in incoherent array: 45!
+   \end{itemize}
+  }
+
+  \frame{
+    \frametitle{Redshift Maps}
+\includegraphics[width=4.2in]{Figures/roebber.jpg}
+
+  }
+
+   \frame{
+\vspace{-0.25in}
+    \frametitle{Sky Maps}
+    \begin{figure}
+      \begin{columns}
+        \column{.8\linewidth}
+\includegraphics[width=\textwidth]{Figures/IQUV.pdf}
+        \column{.2\linewidth}
+        \caption{
+The adjoint $A^\dagger$ projection PSF of a purely right circularly polarized gravitational wave
+point-source located at $\hat{n} = \hat{y}$. 
+ }
+      \end{columns}
+    \end{figure}
+  }
+
+
+  \frame{
+    \frametitle{finite pulsars}
+ \begin{figure}
+      \begin{columns}
+        \column{.7\linewidth}
+    \includegraphics[width=\textwidth]{Figures/resolution_elements.pdf}
+      \column{.3\linewidth}
+    \caption{The number of resolution elements of a PTA as a function of number of pulsars.}
+      \end{columns}
+    \end{figure}
+  
+}
+
+
+  \frame{
+    \frametitle{Coherent Pulsar Timing Arrays (PTAs)}
+    \begin{itemize}
+    \item some pulsars (e.g. PSR J0437) have precise distance to
+      within a wavelength
+    \item resolution increases to $\lambda/D$: arc minutes
+        \item full map of galaxy with SKA, orders of magnitude
+          improvement in sensitivity, resolution
+        \item Precision distances with Scintillometry
+        \item Coherent imaging GW telescope with arcsecond resolution
+        \item no ``stochastic'' regime: small number of SMBH near merger
+        \item counterparts of supermassive BH binaries, precise redshifts
+    \end{itemize}
+  }
+
+   \frame{
+\vspace{-0.25in}
+    \frametitle{Coherent Sky Maps}
+    \begin{figure}
+      \begin{columns}
+        \column{.8\linewidth}
+\includegraphics[width=\textwidth]{Figures/IQUVwpulsardist.jpg}
+        \column{.2\linewidth}
+        \caption{
+Sky map including pulsar term, $r\sim 3 \lambda$
+ }
+      \end{columns}
+    \end{figure}
+  }
+
+
+
+
+  \frame{
+    \frametitle{Diffractive (evanescent) imaging}
+    \begin{itemize}
+        \item most galaxies too weak to form real gravitational lens images
+        \item always form evanescent images through wave optics
+        \item analogous to quantum mechanical tunelling
+        \item diffractive angle $\theta \sim \lambda/D$
+        \item $\lambda \sim$ pc, $D\sim 500$pc $\longrightarrow \theta
+          \sim 0.1^o$
+        \item dominated by edge-on spirals!
+        \item flux of evanescent (complex, diffractive) images not supressed 
+    \end{itemize}
+  }
+
+  \frame{
+    \frametitle{Time delay $H_0$}
+    \begin{itemize}
+        \item stack diffractive GW flux from all edge-on galaxies
+        \item distance from angle-delay relation $\tau \sim \theta^2      L$
+        \item Shapiro delay neglible off-axis
+        \item sensitivity in SKA/DSA era
+    \end{itemize}
+  }
+
+
+
+  \frame{
+    \frametitle{Diffractive/Evanescent Gravitational Wave Lensing}
+\includegraphics[width=4.5in]{Figures/ptadiffraction.jpg}
+
+Jow+ULP, PRL 134, April 4, 2025
+  }
+
+
+  \frame{
+\vspace{-0.25in}
+    \frametitle{Potential}
+
+\includegraphics[width=2.5in]{Figures/ptasn.jpg}
+
+signal-to-
+noise in PTA experiment vs
+a given precision on H0. The dashed line shows the effective
+maximum precision that can be achieved due to the effect of
+lens’ peculiar velocity. (Jow+ULP 25)
+
+  }
+
+
+
+
+  \frame{
+\vspace{-0.5in}
+    \frametitle{Lensing by Edge-on galaxies}
+    \begin{itemize}
+    \item most edge-on galaxies are strong lenses due to stellar
+      column density
+    \item only a few such lenses cataloged
+    \item strong selection effects: extinction, small splitting angle
+    \item potentially detectable in radio: QSOs, FRBs
+    \end{itemize}
+  }
+
+
+  \frame{
+\vspace{-0.25in}
+    \frametitle{Edge-on Galaxy Lenses}
+
+\includegraphics[width=4.5in]{Figures/unionslens.jpg}
+
+Barrosco+24
+  }
+
+
+  \frame{
+\vspace{-0.25in}
+    \frametitle{Searching for Edge-on Galaxies}
+
+\includegraphics[width=4.5in]{Figures/youichilens.png}
+
+Umetsu, Ohyama, ULP+
+  }
+
+
+
+
+  \frame{
+\vspace{-0.5in}
+    \frametitle{Discussion}
+    \begin{itemize}
+    \item Eikonal effects applicable to compact radio sources,
+      e.g. FRBs, pulsars
+    \item full wave
+effect dominates for long wavelengths as Fresnel scale is bigger then Einstein radius
+    \item gravitational waves:  LIGO, LISA, PTA
+    \item with SKA PTA parameters and favourable source geometries, $H_0$
+      measurement at 0.1\% possible.
+      \item Shapiro delay uncertainty neglible
+    \end{itemize}
+  }
+
+
+
+  \frame{
+%\vspace{-0.5in}
+    \frametitle{Conclusions}
+    \begin{itemize}
+    \item PTA signals likely fully polarized, point image/source search in
+      Stokes space.
+    \item native PTA has 45 pixels: likely to identify individual sources
+     \item wave optics changes nature of astrophysical observables: Coherent FRB/pulsar/GW radiation one of the potentially most
+      precise measurements in physics
+      \item PTA weak diffractive lensing may give new tool for Hubble
+        Constant tension
+      \item evanescent lensing/instantons
+     \item at long wavelength, evanescent lensed images are
+        unsuppressed
+     \item large population of edge-on lenses: Euclid!
+    \end{itemize}
+  }
+
+\end{document}

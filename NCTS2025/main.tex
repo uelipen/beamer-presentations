@@ -1,0 +1,238 @@
+\documentclass[graphics]{beamer}
+
+\usepackage{graphicx}
+\usepackage{verbatim}
+\usepackage{wrapfig}
+\useoutertheme{shadow}
+%\usecolortheme{orchid}
+\usecolortheme{seahorse}
+
+
+% math commands
+\newcommand{\be}{\begin{eqnarray}}
+\newcommand{\ee}{\end{eqnarray}}
+\newcommand{\beq}{\begin{equation}}
+\newcommand{\eeq}{\end{equation}}
+\def\simless{\mathbin{\lower 3pt\hbox
+      {$\rlap{\raise 5pt\hbox{$\char'074$}}\mathchar"7218$}}}
+\def\simgreat{\mathbin{\lower 3pt\hbox
+      {$\rlap{\raise 5pt\hbox{$\char'076$}}\mathchar"7218$}}} %> or of order
+
+% variables
+
+\def\toonscale{0.45}
+\def\mboxy#1{\mbox{\small #1}}
+
+
+\begin{comment}
+\AtBeginSection[]{
+  \frame{
+    \frametitle{Outline}
+    \tableofcontents[currentsection]
+  }
+}
+\end{comment}
+
+\title{Diffraction of Gravitational Waves
+}
+%\subtitle{interim update}
+\author[U. Pen]{Ue-Li Pen, Dylan Jow, Keiichi Umetsu, Youichi Ohyama
+}
+\date{March 7, 2025}
+
+
+\begin{document}
+
+%\section*{Introduction}
+\section{Lenses}
+
+\begin{comment}
+  \subsection{Outline}
+
+  \frame{
+    \frametitle{Outline}
+    \tableofcontents
+  }
+\end{comment}
+
+\frame{\maketitle}
+
+
+
+  \frame{
+    \frametitle{Diffractive/Evanescent Gravitational Wave Lensing}
+\includegraphics[width=4.5in]{Figures/ptadiffraction.jpg}
+
+Jow+ 2407.03214
+  }
+
+
+  \frame{
+    \frametitle{Gravitational Waves -- Wave optics}
+    \begin{itemize}
+        \item Coherent, distant source of radiation
+        \item Traditionally only studied in geometric (Eikonal) limit: interference
+        \item Kirchoff-Fresnel path integral
+        \item Witten 2010: generalized by Picard-Lefschetz theory
+        \item classical version of diffraction with complex solutions!
+        \item Morse index, evanescent/complex images: measure time
+          delays in weak lensing, direction triangulation distance!
+    \end{itemize}
+  }
+
+
+  \frame{
+    \frametitle{Pulsar Timing Arrays (PTAs)}
+    \begin{itemize}
+      \item initial GW evidence in 2023 (nanoGrav++)
+        \item currently from a few dozen nearby PSRs
+        \item full map of galaxy with SKA, orders of magnitude
+          improvement in sensitivity, resolution
+        \item Precision distances with Scintillometry
+        \item Coherent imaging GW telescope with arcsecond resolution
+        \item no ``stochastic'' regime: small number of SMBH near merger
+        \item counterparts of supermassive BH binaries, precise redshifts
+    \end{itemize}
+  }
+
+  \frame{
+    \frametitle{Diffractive (evanescent) imaging}
+    \begin{itemize}
+        \item most galaxies too weak to form real gravitational lens images
+        \item always form evanescent images through wave optics
+        \item analogous to quantum mechanical tunelling
+        \item diffractive angle $\theta \sim \lambda/D$
+        \item $\lambda \sim$ pc, $D\sim 500$pc $\longrightarrow \theta
+          \sim 0.1^o$
+        \item dominated by edge-on spirals!
+        \item flux of evanescent (complex, diffractive) images not supressed 
+    \end{itemize}
+  }
+
+  \frame{
+    \frametitle{Time delay $H_0$}
+    \begin{itemize}
+        \item stack diffractive GW flux from all edge-on galaxies
+        \item distance from angle-delay relation $\tau \sim \theta^2      L$
+        \item Shapiro delay neglible off-axis
+        \item sensitivity in SKA/DSA era
+    \end{itemize}
+  }
+
+
+
+  \frame{
+\vspace{-0.25in}
+    \frametitle{Potential}
+
+\includegraphics[width=2.5in]{Figures/ptasn.jpg}
+
+signal-to-
+noise in PTA experiment vs
+a given precision on H0. The dashed line shows the effective
+maximum precision that can be achieved due to the effect of
+lens’ peculiar velocity. (Jow+ULP 25)
+
+  }
+
+  \frame{
+    \frametitle{Waves, Particles, Geodesics}
+    \begin{itemize}
+        \item Everything is a wave
+        \item Short wavelength limit has classical particle
+          interpretation: Eikonal
+        \item Picard-Lefschetz: no waves, everything is a particle!
+        \item evanescent lensing: complex eikonal lensing
+        \item New tool for QM Cosmology, FRBs, pulsars
+        \item alternative picture for quantization: quantum gravity?
+    \end{itemize}
+  }
+
+
+
+  \frame{
+\vspace{-0.5in}
+    \frametitle{Evanescent Images}
+    \begin{itemize}
+    \item consider ``rational lens'' potential $\psi(\theta)=\alpha/(1+\theta^2)$
+    \item Geometric/eikonal images at $\psi'=\theta$
+    \item 5 roots.  1 or 3 real roots, rest imaginary
+    \item P-L: at most one imaginary image contributes!
+    \item Evanescent (imaginary) image can be brighter than unlensed
+      real image
+    \item real part corresponds to position, imaginary part to supression
+    \end{itemize}
+  }
+
+
+  \frame{
+\vspace{-0.5in}
+    \frametitle{Lensing by Edge-on galaxies}
+    \begin{itemize}
+    \item most edge-on galaxies are strong lenses due to stellar
+      column density
+    \item only a few such lenses cataloged
+    \item strong selection effects: extinction, small splitting angle
+    \item potentially detectable in radio: QSOs, FRBs
+    \end{itemize}
+  }
+
+
+  \frame{
+\vspace{-0.25in}
+    \frametitle{Edge-on Galaxy Lenses}
+
+\includegraphics[width=4.5in]{Figures/unionslens.jpg}
+
+Barrosco+24
+  }
+
+
+  \frame{
+\vspace{-0.25in}
+    \frametitle{Searching for Edge-on Galaxies}
+
+\includegraphics[width=4.5in]{Figures/youichilens.png}
+
+Umetsu, Ohyama, ULP+
+  }
+
+
+
+
+  \frame{
+\vspace{-0.5in}
+    \frametitle{Discussion}
+    \begin{itemize}
+    \item Eikonal effects applicable to compact radio sources,
+      e.g. FRBs, pulsars
+    \item full wave
+effect dominates for long wavelengths as Fresnel scale is bigger then Einstein radius
+    \item gravitational waves:  LIGO, LISA, PTA
+    \item with SKA PTA parameters and favourable source geometries, $H_0$
+      measurement at 0.1\% possible.
+      \item Shapiro delay uncertainty neglible
+    \end{itemize}
+  }
+
+
+
+  \frame{
+%\vspace{-0.5in}
+    \frametitle{Conclusions}
+    \begin{itemize}
+     \item wave optics changes nature of astrophysical observables: Coherent FRB/pulsar/GW radiation one of the potentially most
+      precise measurements in physics
+      \item PTA weak diffractive lensing may give new tool for Hubble
+        Constant tension
+      \item evanescent lensing/instantons
+      \item evanescent lensing images understood through
+        Picard-Lefschetz theory and complex/evanescent images
+      \item at long wavelength, evanescent lensed images are
+        unsuppressed
+      \item simple geometric optics calculation with complex roots!
+      \item large population of edge-on lenses: Euclid!
+    \end{itemize}
+  }
+
+\end{document}
